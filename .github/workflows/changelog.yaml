@@ -41,7 +41,7 @@ jobs:
         test -s debian/changelog || ( dch --create --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog )
         gbp dch --help
         # dch --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog 
-        gbp dch -c --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.new_tag }}
+        gbp dch -c --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.new_tag }} --verbose
       env:
         TZ: UTC0
 
