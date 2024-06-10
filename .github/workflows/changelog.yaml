@@ -28,6 +28,7 @@ jobs:
       uses: anothrNick/github-tag-action@1.36.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DEFAULT_BUMP: none
         WITH_V: false
         DRY_RUN: true
         PRERELEASE_SUFFIX: rc
@@ -41,7 +42,7 @@ jobs:
         test -s debian/changelog || ( dch --create --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog )
         gbp dch --help
         # dch --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog 
-        gbp dch -c --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.new_tag }} --verbose --upstream-tag='%(version)s'
+        gbp dch -c --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.new_tag }} --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
       env:
         TZ: UTC0
 
