@@ -31,24 +31,24 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Update debian/changelog
-      run: |
-        export DEBFULLNAME=$(grep '^Maintainer:' debian/control | cut -d : -f 2 | cut -d '<' -f 1 | xargs echo)
-        export DEBEMAIL=$(grep '^Maintainer:' debian/control | cut -d '<' -f 2 | tr -d '>')
-        git config --local user.name "$DEBFULLNAME"
-        git config --local user.email "$DEBEMAIL"
-        test -s debian/changelog || ( dch --create --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog )
-        dch --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog
-        cat debian/changelog 
-        # gbp dch --help
-        # gbp dch --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.new_tag }} --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
-        gbp dch --ignore-branch --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
-        cat debian/changelog 
-      env:
-        TZ: UTC0
+      - name: Update debian/changelog
+        run: |
+          export DEBFULLNAME=$(grep '^Maintainer:' debian/control | cut -d : -f 2 | cut -d '<' -f 1 | xargs echo)
+          export DEBEMAIL=$(grep '^Maintainer:' debian/control | cut -d '<' -f 2 | tr -d '>')
+          git config --local user.name "$DEBFULLNAME"
+          git config --local user.email "$DEBEMAIL"
+          test -s debian/changelog || ( dch --create --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog )
+          dch --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog
+          cat debian/changelog 
+          # gbp dch --help
+          # gbp dch --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.new_tag }} --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
+          gbp dch --ignore-branch --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
+          cat debian/changelog 
+        env:
+          TZ: UTC0
 
-    - name: "Commit all changed files back to the repository"
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_options: '--signoff'
-        push_options: '--force'
+      - name: "Commit all changed files back to the repository"
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_options: '--signoff'
+          push_options: '--force'
