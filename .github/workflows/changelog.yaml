@@ -40,7 +40,7 @@ jobs:
         export DEBEMAIL=$(grep '^Maintainer:' debian/control | cut -d '<' -f 2 | tr -d '>')
         git config --local user.name "$DEBFULLNAME"
         git config --local user.email "$DEBEMAIL"
-        test -n 'debian/changelog' || ( dch --create --package test --newversion 0.0.0 --empty && ls -lah && git add debian/changelog && git status )
+        test -s 'debian/changelog' || ( dch --create --package test --newversion 0.0.0 --empty && ls -lah && git add debian/changelog && git status )
         gbp dch -c --debian-branch main
       env:
         TZ: UTC0
