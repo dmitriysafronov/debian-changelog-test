@@ -4,8 +4,9 @@
 name: debian-changelog
 
 on:
-  push:
-    branches: [ "main" ]
+  pull_request:
+    branches:
+      - main
     paths-ignore:
       - 'debian/changelog'
       - '.github/**'

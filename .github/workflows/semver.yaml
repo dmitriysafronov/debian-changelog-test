@@ -1,0 +1,21 @@
+name: Auto Tag my Application
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+concurrency: production
+jobs:
+  Patch:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: '0'
+    - id: semver-tag
+      uses: gandarez/semver-action@v2.0.0
+      with:
+        branching_model: "trunk-based"
+    - name: "Created tag"
+      run: echo "tag ${{ steps.semver-tag.outputs.semver_tag }}"
