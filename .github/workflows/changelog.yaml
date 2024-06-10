@@ -38,6 +38,8 @@ jobs:
       run: |
         export DEBFULLNAME=$(grep '^Maintainer:' debian/control | cut -d : -f 2 | cut -d '<' -f 1 | xargs echo)
         export DEBEMAIL=$(grep '^Maintainer:' debian/control | cut -d '<' -f 2 | tr -d '>')
+        git config --local user.name "$DEBFULLNAME"
+        git config --local user.email "$DEBEMAIL" 
         gbp dch -c --debian-branch main
       env:
         TZ: UTC0
