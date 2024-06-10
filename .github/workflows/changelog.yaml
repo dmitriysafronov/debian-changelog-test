@@ -42,7 +42,7 @@ jobs:
         git config --local user.email "$DEBEMAIL"
         test -s debian/changelog || ( dch --create --package test --newversion 0.0.0 --empty && git add debian/changelog )
         gbp dch --help
-        gbp dch -c --debian-branch main --upstream-tag=%(version)s
+        gbp dch -c --debian-branch main --upstream-tag="%(version)s"
       env:
         TZ: UTC0
 
