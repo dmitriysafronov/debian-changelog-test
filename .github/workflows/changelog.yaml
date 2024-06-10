@@ -40,11 +40,10 @@ jobs:
         export DEBEMAIL=$(grep '^Maintainer:' debian/control | cut -d '<' -f 2 | tr -d '>')
         git config --local user.name "$DEBFULLNAME"
         git config --local user.email "$DEBEMAIL"
-        dch --create --package test
+        dch --create --package test --new-version 0.0.0
         gbp dch -c --debian-branch main
       env:
         TZ: UTC0
 
     - name: Push changes
       uses: ad-m/github-push-action@master
-
