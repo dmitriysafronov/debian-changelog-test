@@ -1,8 +1,4 @@
-# SPDX-FileCopyrightText: 2023 Andrea Pappacoda
-# SPDX-License-Identifier: Apache-2.0
-
 name: debian-changelog
-
 on:
   pull_request:
     branches:
@@ -10,30 +6,31 @@ on:
     paths-ignore:
       - 'debian/changelog'
       - '.github/**'
-
 defaults:
   run:
     shell: sh
-
 jobs:
   debian-changelog:
     runs-on: ubuntu-latest
-
     permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the
-      # added or changed files to the repository.
       contents: write
-
     steps:
-
     - name: Install dependencies
       run: |
         sudo apt-get update
         sudo apt-get -y install --no-install-recommends git-buildpackage
-
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
+
+    - name: Get future version
+      id: taggerDryRun
+      uses: anothrNick/github-tag-action@1.36.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        WITH_V: false
+        DRY_RUN: true
+        PRERELEASE_SUFFIX: rc
 
     - name: Update debian/changelog
       run: |
@@ -41,11 +38,14 @@ jobs:
         export DEBEMAIL=$(grep '^Maintainer:' debian/control | cut -d '<' -f 2 | tr -d '>')
         git config --local user.name "$DEBFULLNAME"
         git config --local user.email "$DEBEMAIL"
-        test -s debian/changelog || ( dch --create --package test --newversion 0.0.0 --empty && git add debian/changelog )
+        test -s debian/changelog || ( dch --create --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog )
         gbp dch --help
-        gbp dch -c --ignore-branch --upstream-tag="%(version)s"
+        # dch --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog 
+        gbp dch -c --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.new_tag }}
       env:
         TZ: UTC0
 
     - name: Push changes
       uses: ad-m/github-push-action@master
+      with:
+        branch: ${{ github.head_ref }}
