@@ -37,5 +37,7 @@ test (0.0.0) UNRELEASED; urgency=medium
   * changelog
   * semver
   * trigger-03
+  * no v
+  * PRERELEASE_SUFFIX: rc
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 17:09:41 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 17:15:33 +0000
