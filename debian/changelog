@@ -1,4 +1,4 @@
-test (0.0.0) UNRELEASED; urgency=medium
+test (1.0.1) UNRELEASED; urgency=medium
 
   * workflow: create
   * test 7
@@ -49,5 +49,6 @@ test (0.0.0) UNRELEASED; urgency=medium
   * defaut bump #patch
   * -b
   * -b #minor
+  * UNRELEASED
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 17:41:50 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 18:15:06 +0000
