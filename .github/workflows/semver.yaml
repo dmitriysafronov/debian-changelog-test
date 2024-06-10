@@ -33,14 +33,21 @@ jobs:
           export DEBEMAIL=$(grep '^Maintainer:' debian/control | cut -d '<' -f 2 | tr -d '>')
           git config --local user.name "$DEBFULLNAME"
           git config --local user.email "$DEBEMAIL"
-          test -s debian/changelog || ( dch --create --package test --newversion "0.0.0" "initial" && git add debian/changelog )
-          grep -c UNRELEASED debian/changelog
-          if [ $(head -n 1 debian/changelog | grep -c 'UNRELEASED;') == 1 ]; then sed -i 's|UNRELEASED|unstable|' debian/changelog; else exit 1; fi
-          cat debian/changelog 
-          # dch --help
-          # gbp dch --help
-          gbp dch --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.tag }} --debian-tag='%(version)s' --upstream-tag='%(version)s'
-          cat debian/changelog 
+          #
+          GBP_DCH_COMMAND="gbp dch --package test --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.tag }} --debian-tag='%(version)s' --upstream-tag='%(version)s'"
+
+          if [ test -s debian/changelog ]; then
+            if [ $(head -n 1 debian/changelog | grep -c 'UNRELEASED;') == 1 ]; then
+              sed -i 's|UNRELEASED;|unstable;|' debian/changelog;
+              ${GBP_DCH_COMMAND}
+            else
+              echo "No UNRELEASED version!"
+              exit 1;
+            fi
+          else
+            ${GBP_DCH_COMMAND} --create
+          fi
+          git add debian/changelog
         env:
           TZ: UTC0
 
