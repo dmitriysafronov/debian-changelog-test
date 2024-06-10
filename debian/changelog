@@ -42,5 +42,6 @@ test (1.1.0-rc.1) UNRELEASED; urgency=medium
   * dch
   * gbp dch --help
   * dash
+  * --verbose
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 17:22:45 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 17:26:43 +0000
