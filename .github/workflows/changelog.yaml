@@ -41,10 +41,12 @@ jobs:
         gbp dch --help
         # dch --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog 
         gbp dch -c --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.new_tag }} --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
+        git push
+        echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
       env:
         TZ: UTC0
 
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        branch: ${{ github.head_ref }}
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     branch: ${{ github.head_ref }}
