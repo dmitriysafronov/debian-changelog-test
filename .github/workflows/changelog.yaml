@@ -38,10 +38,11 @@ jobs:
         git config --local user.name "$DEBFULLNAME"
         git config --local user.email "$DEBEMAIL"
         test -s debian/changelog || ( dch --create --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog )
-        gbp dch --help
-        # dch --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog 
-        gbp dch --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.new_tag }} --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
-      env:
+        dch --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog 
+        # gbp dch --help
+        # gbp dch --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.new_tag }} --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
+        gbp dch --ignore-branch --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
+        env:
         TZ: UTC0
 
     - name: "Commit all changed files back to the repository"
