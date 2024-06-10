@@ -40,14 +40,9 @@ jobs:
         test -s debian/changelog || ( dch --create --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog )
         gbp dch --help
         # dch --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog 
-        gbp dch -c --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.new_tag }} --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
-        # git push
-        # echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+        gbp dch --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.new_tag }} --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
       env:
         TZ: UTC0
 
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        branch: ${{ github.head_ref }}
-        force_with_lease: true
+    - name: "Commit all changed files back to the repository"
+      uses: stefanzweifel/git-auto-commit-action@v4
