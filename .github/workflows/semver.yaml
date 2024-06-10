@@ -35,9 +35,8 @@ jobs:
           git config --local user.email "$DEBEMAIL"
           test -s debian/changelog || ( dch --create --package test --newversion ${{ steps.taggerDryRun.outputs.tag }} --empty && git add debian/changelog )
           dch --help
-          dch -i --newversion ${{ steps.taggerDryRun.outputs.tag }} --empty
           # gbp dch --help
-          gbp dch --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.tag }} --debian-tag='%(version)s' --upstream-tag='%(version)s'
+          gbp dch -r --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.tag }} --debian-tag='%(version)s' --upstream-tag='%(version)s'
           cat debian/changelog 
         env:
           TZ: UTC0
