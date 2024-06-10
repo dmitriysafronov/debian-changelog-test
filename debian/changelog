@@ -55,5 +55,6 @@ test (1.0.1) UNRELEASED; urgency=medium
   * Merge 2414c6137d72c8243bbf91ac8798db33e50108a7 into add9a036e502f7decb28be339ae3062eacbcc3be
   * Merge 41a8b25105d0a66b933e19f8e5aa3c2053488a47 into add9a036e502f7decb28be339ae3062eacbcc3be
   * Merge c7c9da37bf000a6c1ddf3bd560c6a30130eb16c8 into 03a1b4e7caf7eb0a9fe52f34f6246f1becc97c56
+  * Merge 0802c508614775acc25daf38a8219ed8b973a2e3 into 03a1b4e7caf7eb0a9fe52f34f6246f1becc97c56
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 18:28:41 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 18:34:17 +0000
