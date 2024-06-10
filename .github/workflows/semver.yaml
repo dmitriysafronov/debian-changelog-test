@@ -48,6 +48,7 @@ jobs:
         with:
           commit_options: '--signoff'
           push_options: '--force'
+          branch: "main"
 
       - name: Apply Tag
         uses: K-Phoen/semver-release-action@master
