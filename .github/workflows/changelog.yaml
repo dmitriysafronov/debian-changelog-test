@@ -41,10 +41,11 @@ jobs:
         export DEBEMAIL=$(grep '^Maintainer:' debian/control | cut -d '<' -f 2 | tr -d '>')
         git config --local user.name "$DEBFULLNAME"
         git config --local user.email "$DEBEMAIL"
-        test -s 'debian/changelog' || ( dch --create --package test --newversion 0.0.0 --empty && ls -lah && git add debian/changelog && git status )
-        gbp dch -c --debian-branch main
+        test -s debian/changelog || ( dch --create --package test --newversion 0.0.0 --empty && ls -lah && git add debian/changelog && git status )
+        gbp dch --debian-branch main
+        cat debian/changelog
       env:
         TZ: UTC0
 
-    - name: Push changes
-      uses: ad-m/github-push-action@master
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@master
