@@ -1,0 +1,22 @@
+test (0.0.0) UNRELEASED; urgency=medium
+
+  * workflow: create
+  * test 7
+  * workflow: w/o --empty
+  * test 8
+  * workflow: test
+  * control
+  * workflow: new version
+  * test 9
+  * workflow: typo
+  * test 10
+  * workflow: --empty
+  * test 11
+  * workflow: git
+  * test 12
+  * workflow: test
+  * test 13
+  * workflow: test -s
+  * test 14
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 15:27:38 +0000
