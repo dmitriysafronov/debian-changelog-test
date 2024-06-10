@@ -44,5 +44,6 @@ test (1.1.0-rc.1) UNRELEASED; urgency=medium
   * dash
   * --verbose
   * --debian-tag='%(version)s'
+  * --upstream-tag='%(version)s'
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 17:29:29 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 17:31:12 +0000
