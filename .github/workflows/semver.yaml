@@ -33,7 +33,7 @@ jobs:
           export DEBEMAIL=$(grep '^Maintainer:' debian/control | cut -d '<' -f 2 | tr -d '>')
           git config --local user.name "$DEBFULLNAME"
           git config --local user.email "$DEBEMAIL"
-          test -s debian/changelog || ( dch --create --package test --newversion ${{ steps.taggerDryRun.outputs.tag }} --empty && git add debian/changelog )
+          test -s debian/changelog || ( dch --create --package test --newversion "0.0.0" "initial" && git add debian/changelog )
           grep -c UNRELEASED debian/changelog
           if [ $(head -n 1 debian/changelog | grep -c 'UNRELEASED;') == 1 ]; then sed -i 's|UNRELEASED|unstable|' debian/changelog; else exit 1; fi
           cat debian/changelog 
