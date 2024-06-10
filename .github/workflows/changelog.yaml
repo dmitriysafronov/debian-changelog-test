@@ -21,15 +21,15 @@ jobs:
         sudo apt-get -y install --no-install-recommends git-buildpackage
     - uses: actions/checkout@v3
 
-    - name: Get future version
+    - name: Tag
       id: taggerDryRun
-      uses: anothrNick/github-tag-action@1.36.0
+      uses: K-Phoen/semver-release-action@master
+      with:
+        release_branch: "main"
+        release_strategy: "none"
+        tag_format: "%major%.%minor%.%patch%"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        DEFAULT_BUMP: none
-        WITH_V: false
-        DRY_RUN: true
-        PRERELEASE_SUFFIX: rc
 
     - name: Update debian/changelog
       run: |
@@ -37,11 +37,11 @@ jobs:
         export DEBEMAIL=$(grep '^Maintainer:' debian/control | cut -d '<' -f 2 | tr -d '>')
         git config --local user.name "$DEBFULLNAME"
         git config --local user.email "$DEBEMAIL"
-        test -s debian/changelog || ( dch --create --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog )
-        dch --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog
+        test -s debian/changelog || ( dch --create --package test --newversion ${{ steps.taggerDryRun.outputs.tag }} --empty && git add debian/changelog )
+        dch --package test --newversion ${{ steps.taggerDryRun.outputs.tag }} --empty && git add debian/changelog
         cat debian/changelog 
         # gbp dch --help
-        # gbp dch --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.new_tag }} --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
+        # gbp dch --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.tag }} --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
         gbp dch --ignore-branch --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
         cat debian/changelog 
       env:
