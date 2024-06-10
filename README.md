@@ -1,3 +1,1 @@
 # debian-changelog-test
-
-test
