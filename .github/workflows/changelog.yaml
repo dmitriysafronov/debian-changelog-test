@@ -1,0 +1,48 @@
+# SPDX-FileCopyrightText: 2023 Andrea Pappacoda
+# SPDX-License-Identifier: Apache-2.0
+
+name: debian-changelog
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - 'debian/changelog'
+      - '.github/workflows/**'
+
+defaults:
+  run:
+    shell: sh
+
+jobs:
+  debian-changelog:
+    runs-on: ubuntu-latest
+
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+
+    steps:
+
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt -y install --no-install-recommends git-buildpackage
+
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Update debian/changelog
+      run: |
+        # export DEBFULLNAME=$(grep '^Maintainer:' control | cut -d : -f 2 | cut -d '<' -f 1 | xargs echo)
+        # export DEBEMAIL=$(grep '^Maintainer:' control | cut -d '<' -f 2 | tr -d '>')
+        gbp dch -c
+      env:
+        TZ: UTC0
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ env.TOKEN }}
