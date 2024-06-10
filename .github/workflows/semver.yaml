@@ -13,9 +13,11 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: '0'
-    - id: semver-tag
-      uses: gandarez/semver-action@v2.0.0
-      with:
-        branching_model: "trunk-based"
-    - name: "Created tag"
-      run: echo "tag ${{ steps.semver-tag.outputs.semver_tag }}"
+
+    - name: Update version
+      id: taggerFinal
+      uses: anothrNick/github-tag-action@1.36.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        WITH_V: false
+        PRERELEASE_SUFFIX: rc
