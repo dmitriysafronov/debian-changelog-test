@@ -45,7 +45,7 @@ jobs:
           else
             dch --package test --create --newversion ${{ steps.taggerDryRun.outputs.tag }} --empty
           fi
-          gbp dch --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.tag }} --debian-tag='%(version)s' --upstream-tag='%(version)s'
+          gbp dch --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.tag }} --debian-tag='%(version)s' --upstream-tag='%(version)s' --full
           git add debian/changelog
         env:
           TZ: UTC0
