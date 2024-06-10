@@ -34,7 +34,7 @@ jobs:
           git config --local user.name "$DEBFULLNAME"
           git config --local user.email "$DEBEMAIL"
           #
-          if [ test -s debian/changelog ]; then
+          if [ -s debian/changelog ]; then
             if [ $(head -n 1 debian/changelog | grep -c 'UNRELEASED;') == 1 ]; then
               sed -i 's|UNRELEASED;|unstable;|' debian/changelog;
             else
