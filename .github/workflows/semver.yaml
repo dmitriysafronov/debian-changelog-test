@@ -10,15 +10,16 @@ jobs:
   Patch:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: '0'
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: '0'
 
-    - name: Update version
-      id: taggerFinal
-      uses: anothrNick/github-tag-action@1.36.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        DEFAULT_BUMP: none
-        WITH_V: false
-        PRERELEASE_SUFFIX: rc
+      - name: Tag
+        id: taggerDryRun
+        uses: K-Phoen/semver-release-action@master
+        with:
+          release_branch: "main"
+          release_strategy: "release"
+          tag_format: "%major%.%minor%.%patch%"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
