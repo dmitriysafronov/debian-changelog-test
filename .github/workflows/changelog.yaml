@@ -42,7 +42,7 @@ jobs:
         # gbp dch --help
         # gbp dch --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.new_tag }} --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
         gbp dch --ignore-branch --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
-        env:
+      env:
         TZ: UTC0
 
     - name: "Commit all changed files back to the repository"
