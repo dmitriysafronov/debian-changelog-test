@@ -1,4 +1,10 @@
-test (1.4.0) UNRELEASED; urgency=medium
+test (1.5.0) UNRELEASED; urgency=medium
+
+  * UNRELEASED
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 20:11:15 +0000
+
+test (1.4.0) unstable; urgency=medium
 
   * workflow: create
   * test 7
@@ -49,7 +55,7 @@ test (1.4.0) UNRELEASED; urgency=medium
   * defaut bump #patch
   * -b
   * -b #minor
-  * UNRELEASED
+  * unstable
   * Merge 973bdbadbca8446549b2308b6d791b0f54171386 into add9a036e502f7decb28be339ae3062eacbcc3be
   * Merge 74d8447c16cdb45127129747d5d3363a7b210780 into add9a036e502f7decb28be339ae3062eacbcc3be
   * Merge 2414c6137d72c8243bbf91ac8798db33e50108a7 into add9a036e502f7decb28be339ae3062eacbcc3be
@@ -58,7 +64,7 @@ test (1.4.0) UNRELEASED; urgency=medium
   * Merge 0802c508614775acc25daf38a8219ed8b973a2e3 into 03a1b4e7caf7eb0a9fe52f34f6246f1becc97c56
   * Merge 680ac7b823d74205499bdae5c1d20712084ac263 into 03a1b4e7caf7eb0a9fe52f34f6246f1becc97c56
   * Merge b37c1a25e65400b8f7965b85353846f2ed83ae15 into 03a1b4e7caf7eb0a9fe52f34f6246f1becc97c56
-  * UNRELEASED
-  * UNRELEASED
+  * unstable
+  * unstable
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 19:20:29 +0000
