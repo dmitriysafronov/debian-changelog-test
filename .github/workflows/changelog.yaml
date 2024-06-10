@@ -39,8 +39,8 @@ jobs:
         git config --local user.name "$DEBFULLNAME"
         git config --local user.email "$DEBEMAIL"
         test -s debian/changelog || ( dch --create --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog )
-        dch --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog 
-        gbp dch -c --ignore-branch
+        # dch --package test --newversion ${{ steps.taggerDryRun.outputs.new_tag }} --empty && git add debian/changelog 
+        gbp dch -c --ignore-branch --newversion ${{ steps.taggerDryRun.outputs.new_tag }}
       env:
         TZ: UTC0
 
