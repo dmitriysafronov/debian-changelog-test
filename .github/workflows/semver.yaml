@@ -37,8 +37,8 @@ jobs:
           dch --package test --newversion ${{ steps.taggerDryRun.outputs.tag }} --empty && git add debian/changelog
           cat debian/changelog 
           # gbp dch --help
-          # gbp dch --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.tag }} --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
-          gbp dch --ignore-branch --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
+          gbp dch --ignore-branch --new-version ${{ steps.taggerDryRun.outputs.tag }} --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
+          # gbp dch --ignore-branch --verbose --debian-tag='%(version)s' --upstream-tag='%(version)s'
           cat debian/changelog 
         env:
           TZ: UTC0
