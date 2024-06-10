@@ -27,8 +27,8 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo apt update
-        sudo apt -y install --no-install-recommends git-buildpackage
+        sudo apt-get update
+        sudo apt-get -y install --no-install-recommends git-buildpackage
 
     - uses: actions/checkout@v3
       with:
