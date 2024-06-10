@@ -51,3 +51,4 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_options: '--signoff'
+        push_options: '--force'
