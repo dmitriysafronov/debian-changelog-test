@@ -36,8 +36,8 @@ jobs:
 
     - name: Update debian/changelog
       run: |
-        export DEBFULLNAME=$(grep '^Maintainer:' control | cut -d : -f 2 | cut -d '<' -f 1 | xargs echo)
-        export DEBEMAIL=$(grep '^Maintainer:' control | cut -d '<' -f 2 | tr -d '>')
+        export DEBFULLNAME=$(grep '^Maintainer:' debian/control | cut -d : -f 2 | cut -d '<' -f 1 | xargs echo)
+        export DEBEMAIL=$(grep '^Maintainer:' debian/control | cut -d '<' -f 2 | tr -d '>')
         gbp dch -c
       env:
         TZ: UTC0
