@@ -27,5 +27,12 @@ test (0.0.0) UNRELEASED; urgency=medium
   * test 17
   * workflow: test
   * test 18
+  * workflow: test
+  * test 19
+  * workflow: test
+  * test 20
+  * workflows
+  * trigger-01
+  * trigger-02
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 16:09:44 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 16:47:58 +0000
