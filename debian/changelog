@@ -1,4 +1,10 @@
-test (0.0.2) UNRELEASED; urgency=medium
+test (0.0.3) UNRELEASED; urgency=medium
+
+  * UNRELEASED
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 22:17:36 +0000
+
+test (0.0.2) unstable; urgency=medium
 
   * UNRELEASED
 
