@@ -1,4 +1,4 @@
-test (1.1.0-rc.1) UNRELEASED; urgency=medium
+test (1.0.1) UNRELEASED; urgency=medium
 
   * workflow: create
   * test 7
@@ -45,5 +45,14 @@ test (1.1.0-rc.1) UNRELEASED; urgency=medium
   * --verbose
   * --debian-tag='%(version)s'
   * --upstream-tag='%(version)s'
+  * trigger-01
+  * defaut bump #patch
+  * -b
+  * -b #minor
+  * UNRELEASED
+  * Merge 973bdbadbca8446549b2308b6d791b0f54171386 into add9a036e502f7decb28be339ae3062eacbcc3be
+  * Merge 74d8447c16cdb45127129747d5d3363a7b210780 into add9a036e502f7decb28be339ae3062eacbcc3be
+  * Merge 2414c6137d72c8243bbf91ac8798db33e50108a7 into add9a036e502f7decb28be339ae3062eacbcc3be
+  * Merge 41a8b25105d0a66b933e19f8e5aa3c2053488a47 into add9a036e502f7decb28be339ae3062eacbcc3be
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 17:31:12 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 18:24:24 +0000
