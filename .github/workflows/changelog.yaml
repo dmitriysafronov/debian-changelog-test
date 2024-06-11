@@ -7,7 +7,6 @@ concurrency: production
 jobs:
   Patch:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged
     steps:
       - name: Install dependencies
         run: |
