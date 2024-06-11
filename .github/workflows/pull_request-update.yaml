@@ -14,6 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.6
         with:
+          token: ${{ secrets.PAT }}
           fetch-depth: 0
 
       - name: Get Next Version
@@ -22,48 +23,5 @@ jobs:
         with:
           token: ${{ github.token }}
           branch: main
-          noVersionBumpBehavior: silent
+          noVersionBumpBehavior: error
           noNewCommitBehavior: silent
-
-      - name: Use Next Version
-        if: ${{ steps.semver.outputs.next != '' }}
-        run: |
-          echo ${{ steps.semver.outputs.next }}
-        env:
-          TZ: UTC
-
-
-      - name: Install dependencies
-        if: ${{ steps.semver.outputs.next != '' }}
-        run: |
-          sudo apt-get update
-          sudo apt-get -y install --no-install-recommends git-buildpackage
-
-      - name: Update debian/changelog
-        if: ${{ steps.semver.outputs.next != '' }}
-        run: |
-          export DEBFULLNAME=$(grep '^Maintainer:' debian/control | cut -d : -f 2 | cut -d '<' -f 1 | xargs echo)
-          export DEBEMAIL=$(grep '^Maintainer:' debian/control | cut -d '<' -f 2 | tr -d '>')
-          git config --local user.name "$DEBFULLNAME"
-          git config --local user.email "$DEBEMAIL"
-          #
-          # if [ -s debian/changelog ]; then
-          #   if [ $(head -n 1 debian/changelog | grep -c 'UNRELEASED;') == 1 ]; then
-          #     sed -i 's|UNRELEASED;|unstable;|' debian/changelog;
-          #   else
-          #     echo "No UNRELEASED version!"
-          #     exit 1;
-          #   fi
-          # else
-          #   dch --package test --create --newversion ${{ steps.semver.outputs.nextStrict }} --empty
-          # fi
-          gbp dch --ignore-branch --new-version ${{ steps.semver.outputs.nextStrict }} --debian-tag='v%(version)s' --upstream-tag='v%(version)s' --full
-          git add debian/changelog
-        env:
-          TZ: UTC0
-
-      - name: "Commit all changed files back to the repository"
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_options: '--signoff'
-          push_options: '--force'
