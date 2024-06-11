@@ -29,7 +29,7 @@ jobs:
           git config --local user.name "$DEBFULLNAME"
           git config --local user.email "$DEBEMAIL"
           #
-          echo ${{ steps.semver.outputs.nextStrict != '' }}
+          echo ${{ steps.semver.outputs.nextStrict }}
         env:
           TZ: UTC0
 
