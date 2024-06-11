@@ -1,32 +1,5 @@
-test (0.1.0) UNRELEASED; urgency=medium
+test (0.0.4) UNRELEASED; urgency=medium
 
-  * UNRELEASED
-  * UNRELEASED
-  * UNRELEASED
-  * UNRELEASED
-
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 11 Jun 2024 16:17:12 +0000
-
-test (0.1.0) unstable; urgency=medium
-
-  * UNRELEASED
-
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 11 Jun 2024 15:52:47 +0000
-
-test (0.0.3) unstable; urgency=medium
-
-  * UNRELEASED
-
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 22:17:36 +0000
-
-test (0.0.2) unstable; urgency=medium
-
-  * UNRELEASED
-
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 21:42:37 +0000
-
-test (0.0.1) unstable; urgency=medium
-
-  * test-26 (#28)
+  * Initial
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 21:10:11 +0000
