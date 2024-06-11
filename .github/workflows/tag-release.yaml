@@ -21,6 +21,7 @@ jobs:
           token: ${{ github.token }}
           tag: ${{ github.ref_name }}
 
+
       - name: Install dependencies
         run: |
           sudo apt-get update
@@ -33,21 +34,16 @@ jobs:
           git config --local user.name "$DEBFULLNAME"
           git config --local user.email "$DEBEMAIL"
           #
-          # if [ -s debian/changelog ]; then
-          #   if [ $(head -n 1 debian/changelog | grep -c 'UNRELEASED;') == 1 ]; then
-          #     sed -i 's|UNRELEASED;|unstable;|' debian/changelog;
-          #   else
-          #     echo "No UNRELEASED version!"
-          #     exit 1;
-          #   fi
-          # else
-          #   dch --package test --create --newversion ${{ steps.semver.outputs.nextStrict }} --empty
-          # fi
           VERSION=$(echo ${{ github.ref_name }} | sed 's/^v//')
           echo ${VERSION}
+          #
+          if [ ! -s debian/changelog ]; then
+            dch --package test --create --newversion ${VERSION} --empty
+          fi
+          #
           gbp dch --ignore-branch --new-version ${VERSION} --debian-tag='v%(version)s' --upstream-tag='v%(version)s' --full
+          sed -i 's|UNRELEASED;|unstable;|' debian/changelog;
           git add debian/changelog
-          cat debian/changelog
         env:
           TZ: UTC0
 
