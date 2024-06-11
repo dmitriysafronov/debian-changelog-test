@@ -1,3 +1,3 @@
 # debian-changelog-test
 
-40
+40-1
