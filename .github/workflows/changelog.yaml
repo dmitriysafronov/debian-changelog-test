@@ -1,13 +1,15 @@
 name: Populate changelog
-on:
+"on":
   pull_request:
     branches:
       - main
 concurrency: production
 jobs:
-  Patch:
+  changelog:
+    name: Populate changelog
     runs-on: ubuntu-latest
     steps:
+
       - name: Install dependencies
         run: |
           sudo apt-get update
@@ -29,7 +31,7 @@ jobs:
           git config --local user.name "$DEBFULLNAME"
           git config --local user.email "$DEBEMAIL"
           #
-          echo ${{ steps.semver.outputs.nextStrict != '' }}
+          echo ${{ steps.semver.outputs.nextStrict }}
         env:
           TZ: UTC0
 
