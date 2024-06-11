@@ -1,4 +1,4 @@
-test (0.1.0) UNRELEASED; urgency=medium
+test (0.2.0) UNRELEASED; urgency=medium
 
   [ dmitriysafronov ]
   * docs: update CHANGELOG.md for v0.0.4 [skip ci]
@@ -75,7 +75,23 @@ test (0.1.0) UNRELEASED; urgency=medium
   * festure: test-42 (#45)
     Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 11 Jun 2024 16:32:24 +0000
+  [ dmitriysafronov ]
+  * docs: update changelogs for v0.1.0
+
+  [ Dmitriy Safronov ]
+  * feature: rm unused (#46)
+    * feature: rm unused
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    * fix: test
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    * fix: silent
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    * fix: pat
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    ---------
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 11 Jun 2024 16:45:31 +0000
 
 test (0.0.4) unstable; urgency=medium
 

@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.2.0] - 2024-06-11
+### :sparkles: New Features
+- [`1e3e315`](https://github.com/dmitriysafronov/debian-changelog-test/commit/1e3e315c08ba20eb94b4d07f4747c94d7eb9121c) - rm unused *(PR [#46](https://github.com/dmitriysafronov/debian-changelog-test/pull/46) by [@dmitriysafronov](https://github.com/dmitriysafronov))*
+
+
 ## [v0.1.0] - 2024-06-11
 ### :sparkles: New Features
 - [`3e17ef5`](https://github.com/dmitriysafronov/debian-changelog-test/commit/3e17ef5ebeea79a2d3f15b4a7402a4316d2df236) - no skip ci *(commit by [@dmitriysafronov](https://github.com/dmitriysafronov))*
@@ -17,3 +22,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [v0.0.4]: https://github.com/dmitriysafronov/debian-changelog-test/compare/0.0.3...v0.0.4
 [v0.1.0]: https://github.com/dmitriysafronov/debian-changelog-test/compare/v0.0.4...v0.1.0
+[v0.2.0]: https://github.com/dmitriysafronov/debian-changelog-test/compare/v0.1.0...v0.2.0
