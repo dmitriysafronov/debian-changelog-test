@@ -23,4 +23,4 @@ jobs:
           token: ${{ github.token }}
           branch: main
           noVersionBumpBehavior: error
-          noNewCommitBehavior: error
+          noNewCommitBehavior: silent
