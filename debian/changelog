@@ -1,5 +1,74 @@
-test (0.0.4) UNRELEASED; urgency=medium
+test (0.1.0) UNRELEASED; urgency=medium
 
+  [ Dmitriy Safronov ]
   * Initial
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 21:10:11 +0000
+  [ dmitriysafronov ]
+  * docs: update CHANGELOG.md for v0.0.4 [skip ci]
+
+  [ Dmitriy Safronov ]
+  * feature: no skip ci.
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+  * feature: test changelog (#40)
+    * feature: test changelog
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    * Apply automatic changes
+    Signed-off-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+    * feature: test
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    * Apply automatic changes
+    Signed-off-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+    ---------
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    Signed-off-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+    Co-authored-by: dmitriysafronov <dmitriysafronov@users.noreply.github.com>
+
+  [ dmitriysafronov ]
+  * docs: update CHANGELOG.md for v0.1.0
+
+  [ Dmitriy Safronov ]
+  * Test 100500 (#41)
+    * test
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    * feature: test
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    ---------
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+  * feature: test-38 (#42)
+    * feature: test-38
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    * fix: bump
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    * Apply automatic changes
+    Signed-off-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+    ---------
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    Signed-off-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+    Co-authored-by: dmitriysafronov <dmitriysafronov@users.noreply.github.com>
+  * fix: cat -> echo (test-40) (#43)
+    * fix: cat -> echo (test-40)
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    * bug: cat -> echo
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    * fix: cat -> echo
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    * Apply automatic changes
+    Signed-off-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+    ---------
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    Signed-off-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+    Co-authored-by: dmitriysafronov <dmitriysafronov@users.noreply.github.com>
+
+  [ dmitriysafronov ]
+  * docs: update changelogs for v0.1.0
+
+  [ Dmitriy Safronov ]
+  * feature: changelog (#44)
+    * feature: changelog
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    * fix: depth: 0
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+    ---------
+    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 11 Jun 2024 16:24:16 +0000
