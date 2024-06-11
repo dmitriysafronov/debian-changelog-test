@@ -20,16 +20,12 @@ jobs:
           token: ${{ github.token }}
           tag: ${{ github.ref_name }}
 
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install --no-install-recommends git-buildpackage
 
-
-          - name: Install dependencies
-          if: ${{ steps.semver.outputs.next != '' }}
-          run: |
-            sudo apt-get update
-            sudo apt-get -y install --no-install-recommends git-buildpackage
-  
       - name: Update debian/changelog
-        if: ${{ steps.semver.outputs.next != '' }}
         run: |
           export DEBFULLNAME=$(grep '^Maintainer:' debian/control | cut -d : -f 2 | cut -d '<' -f 1 | xargs echo)
           export DEBEMAIL=$(grep '^Maintainer:' debian/control | cut -d '<' -f 2 | tr -d '>')
@@ -46,10 +42,11 @@ jobs:
           # else
           #   dch --package test --create --newversion ${{ steps.semver.outputs.nextStrict }} --empty
           # fi
-          VERSION=$(cat ${{ steps.semver.outputs.nextStrict }} | sed 's/^s//')
-          echo $VERSION
+          VERSION=$(cat ${{ github.ref_name }} | sed 's/^v//')
+          echo ${VERSION}
           gbp dch --ignore-branch --new-version ${VERSION} --debian-tag='v%(version)s' --upstream-tag='v%(version)s' --full
           git add debian/changelog
+          cat debian/changelog
         env:
           TZ: UTC0
 
@@ -64,9 +61,9 @@ jobs:
           body: ${{ steps.changelog.outputs.changes }}
           token: ${{ secrets.PAT }}
 
-      - name: Commit CHANGELOG.md
+      - name: Commit changelogs
         uses: stefanzweifel/git-auto-commit-action@v5.0.1
         with:
           branch: main
-          commit_message: 'docs: update CHANGELOG.md for ${{ github.ref_name }}'
-          file_pattern: CHANGELOG.md
+          commit_message: 'docs: update changelogs for ${{ github.ref_name }}'
+          file_pattern: CHANGELOG.md debian/changelog
