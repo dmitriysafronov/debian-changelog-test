@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.9.0] - 2024-06-13
+
+### 🚀 Features
+
+- Upper_first for debian
+- Cliff-release
+
+### 📚 Documentation
+
+- Update changelogs & version for v0.8.0
+
 ## [0.8.0] - 2024-06-13
 
 ### 🚀 Features
