@@ -32,31 +32,6 @@ jobs:
           VERSION=$(echo ${{ steps.semver.outputs.next }} | sed 's/^v//')
           sed "/^Version:/c\\Version:\ ${VERSION}" -i debian/control
 
-      # - name: Update temporary (unreleased) debian/changelog
-      #   if: ${{ steps.semver.outputs.next != '' }}
-      #   uses: orhun/git-cliff-action@v3
-      #   with:
-      #     config: .cliff.debian.toml
-      #     args: --strip footer --unreleased --tag ${{ steps.semver.outputs.next }}
-      #   env:
-      #     OUTPUT: .debian-changelog.unreleased
-
-      # - name: Update temporary debian/changelog
-      #   if: ${{ steps.semver.outputs.next != '' }}
-      #   uses: orhun/git-cliff-action@v3
-      #   with:
-      #     config: .cliff.debian.toml
-      #     args: --strip header
-      #   env:
-      #     OUTPUT: .debian-changelog.temp
-
-      # - name: Update debian/control
-      #   if: ${{ steps.semver.outputs.next != '' }}
-      #   run: |
-      #     cat .debian-changelog.unreleased > debian/changelog
-      #     cat .debian-changelog.temp >> debian/changelog
-      #     rm -rfv .debian-changelog.*
-
       - name: Update debian/changelog
         if: ${{ steps.semver.outputs.next != '' }}
         uses: orhun/git-cliff-action@v3
@@ -65,31 +40,6 @@ jobs:
           args: --tag ${{ steps.semver.outputs.next }}
         env:
           OUTPUT: debian/changelog
-
-      # - name: Update temporary (unreleased) CHANGELOG.md
-      #   if: ${{ steps.semver.outputs.next != '' }}
-      #   uses: orhun/git-cliff-action@v3
-      #   with:
-      #     config: .cliff.git.toml
-      #     args: --strip footer --unreleased  --tag ${{ steps.semver.outputs.next }}
-      #   env:
-      #     OUTPUT: .CHANGELOG.md.unreleased
-
-      # - name: Update temporary CHANGELOG.md
-      #   if: ${{ steps.semver.outputs.next != '' }}
-      #   uses: orhun/git-cliff-action@v3
-      #   with:
-      #     config: .cliff.git.toml
-      #     args: --strip header
-      #   env:
-      #     OUTPUT: .CHANGELOG.md.temp
-
-      # - name: Update CHANGELOG.md
-      #   if: ${{ steps.semver.outputs.next != '' }}
-      #   run: |
-      #     cat .CHANGELOG.md.unreleased > CHANGELOG.md
-      #     cat .CHANGELOG.md.temp >> CHANGELOG.md
-      #     rm -rfv .CHANGELOG.md.*
 
       - name: Update CHANGELOG.md
         if: ${{ steps.semver.outputs.next != '' }}
