@@ -38,3 +38,9 @@ jobs:
           DEB_BUILD_OPTIONS: noautodbgsym
         with:
           buildpackage-opts: --build=source
+
+      - name: list files
+        run: |
+          ls -la
+          ls -la debian
+          ls -la debian/artifacts
