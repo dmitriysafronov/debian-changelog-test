@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [8.3.1] - 2024-06-13
+
+### 🐛 Bug Fixes
+
+- Added debian/control "Source" field
+
 ## [8.3.0] - 2024-06-13
 
 ### 🚀 Features

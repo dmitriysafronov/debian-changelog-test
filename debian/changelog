@@ -1,8 +1,14 @@
+debian-changelog-test (8.3.1) unstable; urgency=medium
+
+  * Added debian/control "Source" field
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 14:34:18 +0000
+
 debian-changelog-test (8.3.0) unstable; urgency=medium
 
   * Build debian package
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 14:32:03 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 14:32:05 +0000
 
 debian-changelog-test (8.2.0) unstable; urgency=medium
 
