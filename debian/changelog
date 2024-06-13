@@ -1,3 +1,9 @@
+debian-changelog-test (0.7.0) unstable; urgency=medium
+
+  * release
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 11:31:58 +0000
+
 debian-changelog-test (0.6.0) unstable; urgency=medium
 
   * cliff

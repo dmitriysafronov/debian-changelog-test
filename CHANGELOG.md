@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.7.0] - 2024-06-13
+
+### 🚀 Features
+
+- Release
+
+### 📚 Documentation
+
+- Update changelogs & version for v0.6.0
+
 ## [0.6.0] - 2024-06-13
 
 ### 🚀 Features
