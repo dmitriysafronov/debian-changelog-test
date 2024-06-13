@@ -1,8 +1,14 @@
+debian-changelog-test (9.0.1) unstable; urgency=medium
+
+  * Env -> vars
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 20:31:32 +0000
+
 debian-changelog-test (9.0.0) unstable; urgency=medium
 
   * [**breaking**] Env vars
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 20:26:26 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 20:26:27 +0000
 
 debian-changelog-test (8.7.2) unstable; urgency=medium
 
