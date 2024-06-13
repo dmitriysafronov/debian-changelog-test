@@ -1,6 +1,6 @@
 Source: debian-changelog-test
 Maintainer: Dmitriy Safronov <zimniy@cyberbrain.pw>
-Build-Depends: debhelper-compat (= 13)
+Build-Depends: debhelper-compat (= 12)
 Section: metapackages
 Priority: optional
 Standards-Version: 3.9.2
