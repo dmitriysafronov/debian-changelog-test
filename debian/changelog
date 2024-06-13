@@ -1,14 +1,20 @@
+debian-changelog-test (6.0.1) unstable; urgency=medium
+
+  * Strip header/footer
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 13:00:04 +0000
+
+debian-changelog-test (9999.9999.9999) UNRELEASED;
+
+  * Strip header/footer
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 01 Jan 1970 00:00:00 +0000
+
 debian-changelog-test (6.0.0) unstable; urgency=medium
 
   * [**breaking**] Temp
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 12:49:51 +0000
-
-debian-changelog-test (9999.9999.9999) UNRELEASED;
-
-  * [**breaking**] Temp
-
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 01 Jan 1970 00:00:00 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 12:49:28 +0000
 
 debian-changelog-test (5.0.0) unstable; urgency=medium
 
