@@ -24,15 +24,8 @@ jobs:
 
       - name: Update debian/control
         run: |
-          # export DEBFULLNAME=$(grep '^Maintainer:' debian/control | cut -d : -f 2 | cut -d '<' -f 1 | xargs echo)
-          # export DEBEMAIL=$(grep '^Maintainer:' debian/control | cut -d '<' -f 2 | tr -d '>')
-          # git config --local user.name "$DEBFULLNAME"
-          # git config --local user.email "$DEBEMAIL"
-          # #
-          # VERSION=$(echo ${{ github.ref_name }} | sed 's/^v//')
-          # echo ${VERSION}
-          # #
-          sed "/^Version:/c\\Version:\ ${{ steps.debian-changelog.outputs.version }}" -i debian/control
+          VERSION=$(echo ${{ steps.debian-changelog.outputs.version }} | sed 's/^v//')
+          sed "/^Version:/c\\Version:\ ${VERSION}" -i debian/control
         env:
           TZ: UTC0
 
@@ -57,5 +50,5 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5.0.1
         with:
           branch: main
-          commit_message: 'docs: update changelogs & versions for ${{ github.ref_name }}'
+          commit_message: 'docs: update changelogs & version for ${{ github.ref_name }}'
           file_pattern: CHANGELOG.md debian/changelog debian/control
