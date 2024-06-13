@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [8.1.1] - 2024-06-13
+
+### 🐛 Bug Fixes
+
+- Rm skip ci
+
 ## [8.1.0] - 2024-06-13
 
 ### 🚀 Features
