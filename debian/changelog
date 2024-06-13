@@ -1,14 +1,14 @@
+debian-changelog-test (7.0.0) unstable; urgency=medium
+
+  * [**breaking**] Test tag
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 13:09:38 +0000
+
 debian-changelog-test (6.0.1) unstable; urgency=medium
 
   * Strip header/footer
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 13:00:04 +0000
-
-debian-changelog-test (9999.9999.9999) UNRELEASED;
-
-  * Strip header/footer
-
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 01 Jan 1970 00:00:00 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 12:59:33 +0000
 
 debian-changelog-test (6.0.0) unstable; urgency=medium
 
