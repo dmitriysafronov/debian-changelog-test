@@ -48,13 +48,13 @@ jobs:
       - name: Publish to PPA
         uses: yuezk/publish-ppa-package@v2.0.0
         with:
-          repository: ${{ secrets.PPA_REPOSITORY }}
+          repository: ${{ env.PPA_REPOSITORY }}
           gpg_private_key: ${{ secrets.PPA_GPG_PRIVATE_KEY }}
           gpg_passphrase: ${{ secrets.PPA_GPG_PASSPHRASE }}
           tarball: debian/artifacts/*.tar.*
           debian_dir: debian
-          deb_email: "zimniy@cyberbrain.pw"
-          deb_fullname: "Dmitriy Safronov"
-          # series: "mantic"
-          # extra_series: "jammy noble"
-          # revision: ${{ inputs.revision }}
+          deb_email: ${{ env.PPA_EMAIL }}
+          deb_fullname: ${{ env.PPA_FULLNAME }}
+          series: ${{ env.PPA_SERIES }}
+          extra_series: ${{ env.PPA_SERIES_EXTRA }}
+          revision: ${{ env.PPA_REVISION }}
