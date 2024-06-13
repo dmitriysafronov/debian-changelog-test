@@ -16,39 +16,55 @@ jobs:
 
       - name: Update debian/changelog
         uses: orhun/git-cliff-action@v3
-        id: debian-changelog
+        id: changelog-debian
         with:
-          config: cliff.toml
+          config: .cliff.debian.toml
         env:
           OUTPUT: debian/changelog
 
       - name: Update debian/control
         run: |
-          VERSION=$(echo ${{ steps.debian-changelog.outputs.version }} | sed 's/^v//')
+          VERSION=$(echo ${{ steps.changelog-debian.outputs.version }} | sed 's/^v//')
           sed "/^Version:/c\\Version:\ ${VERSION}" -i debian/control
+
+      # - name: Update release CHANGELOG
+      #   id: release-changelog
+      #   uses: requarks/changelog-action@v1.10.2
+      #   with:
+      #     token: ${{ github.token }}
+      #     tag: ${{ github.ref_name }}
+
+      # - name: Create Release
+      #   uses: ncipollo/release-action@v1.14.0
+      #   with:
+      #     allowUpdates: true
+      #     draft: false
+      #     makeLatest: false
+      #     name: ${{ github.ref_name }}
+      #     body: ${{ steps.release-changelog.outputs.changes }}
+      #     token: ${{ secrets.PAT }}
+
+      - name: Update CHANGELOG.md
+        uses: orhun/git-cliff-action@v3
+        id: changelog-git
+        with:
+          config: cliff.git.toml
         env:
-          TZ: UTC0
+          OUTPUT: CHANGELOG.md
 
-      - name: Update release CHANGELOG
-        id: release-changelog
-        uses: requarks/changelog-action@v1.10.2
+      - name: Update .CHANGELOG.md
+        uses: orhun/git-cliff-action@v3
+        id: changelog-release
         with:
-          token: ${{ github.token }}
-          tag: ${{ github.ref_name }}
-
-      - name: Create Release
-        uses: ncipollo/release-action@v1.14.0
-        with:
-          allowUpdates: true
-          draft: false
-          makeLatest: false
-          name: ${{ github.ref_name }}
-          body: ${{ steps.release-changelog.outputs.changes }}
-          token: ${{ secrets.PAT }}
+          config: cliff.git.toml
+          args: --current --strip all
+        env:
+          OUTPUT: .CHANGELOG.md
 
       - name: Commit changelogs
         uses: stefanzweifel/git-auto-commit-action@v5.0.1
         with:
           branch: main
           commit_message: 'docs: update changelogs & version for ${{ github.ref_name }}'
-          file_pattern: CHANGELOG.md debian/changelog debian/control
+          file_pattern: CHANGELOG.md debian/changelog debian/control .CHANGELOG.md
+

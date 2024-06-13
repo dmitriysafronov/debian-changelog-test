@@ -29,22 +29,21 @@ filter_unconventional = true
 split_commits = false
 # regex for parsing and grouping commits
 commit_parsers = [
-  { message = "^feat",                group = "<!-- 0 -->🚀 Features" },
-  { message = "^fix|^bugfix|^hotfix", group = "<!-- 1 -->🐛 Bug Fixes" },
-  { message = "^refactor",            group = "<!-- 2 -->🚜 Refactor" },
-  { message = "^doc.*CHANGELOG.*",    group = "<!-- 3 -->📚 Documentation", skip = true },
-  { message = "^doc.*changelog.*",    group = "<!-- 3 -->📚 Documentation", skip = true },
-  { message = "^doc",                 group = "<!-- 3 -->📚 Documentation" },
-  { message = "^perf",                group = "<!-- 4 -->⚡ Performance" },
-  { message = "^style",               group = "<!-- 5 -->🎨 Styling" },
-  { message = "^test",                group = "<!-- 6 -->🧪 Testing" },
-  { message = "^chore|^ci",           group = "<!-- 7 -->⚙️ Miscellaneous Tasks", skip = true },
-  { body = ".*security",              group = "<!-- 8 -->🛡️ Security" },
-  { message = "^revert",              group = "<!-- 9 -->◀️ Revert" },
+  { message = "^feat",                                group = "<!-- 0 -->🚀 Features" },
+  { message = "^fix|^bugfix|^hotfix",                 group = "<!-- 1 -->🐛 Bug Fixes" },
+  { message = "^refactor",                            group = "<!-- 2 -->🚜 Refactor" },
+  { message = "^doc.*update changelogs & version.*",  group = "<!-- 3 -->📚 Documentation", skip = true },
+  { message = "^doc",                                 group = "<!-- 3 -->📚 Documentation" },
+  { message = "^perf",                                group = "<!-- 4 -->⚡ Performance" },
+  { message = "^style",                               group = "<!-- 5 -->🎨 Styling" },
+  { message = "^test",                                group = "<!-- 6 -->🧪 Testing" },
+  { message = "^chore|^ci",                           group = "<!-- 7 -->⚙️ Miscellaneous Tasks", skip = true },
+  { body = ".*security",                              group = "<!-- 8 -->🛡️ Security" },
+  { message = "^revert",                              group = "<!-- 9 -->◀️ Revert" },
   { message = "^chore\\(release\\): prepare for", skip = true },
-  { message = "^chore\\(deps.*\\)", skip = true },
-  { message = "^chore\\(pr\\)", skip = true },
-  { message = "^chore\\(pull\\)", skip = true },
+  { message = "^chore\\(deps.*\\)",               skip = true },
+  { message = "^chore\\(pr\\)",                   skip = true },
+  { message = "^chore\\(pull\\)",                 skip = true },
 ]
 # protect breaking changes from being skipped due to matching a skipping commit_parser
 protect_breaking_commits = true
