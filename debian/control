@@ -1,22 +1,21 @@
-Package: test
-Version: 8.3.1
-Architecture: all
+Source: test
 Maintainer: Dmitriy Safronov <zimniy@cyberbrain.pw>
-Description: test package
- long description and info
- .
- second paragraph
-
 Section: metapackages
 Priority: optional
-
 Standards-Version: 3.9.2
 
+Package: test
+Architecture: all
+Section: metapackages
+Priority: optional
+Version: 8.3.0
 # Pre-Depends: <comma-separated list of packages>
 Depends: vanilla-gnome-desktop
 Recommends: gnome-firmware
 # Suggests: <comma-separated list of packages>
 # Provides: <comma-separated list of packages>
 # Replaces: <comma-separated list of packages>
-
-Source: test
+Description: test package
+ long description and info
+ .
+ second paragraph
