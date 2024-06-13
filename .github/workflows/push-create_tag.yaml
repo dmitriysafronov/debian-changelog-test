@@ -10,15 +10,16 @@ jobs:
   merge:
     name: Push Create Tag
     runs-on: ubuntu-latest
-    if: "${{ ! startsWith(github.event.head_commit.message, 'docs: update changelogs & version for ') }}"
     steps:
       - name: Checkout
+        if: "${{ ! startsWith(github.event.head_commit.message, 'docs: update changelogs & version for ') }}"
         uses: actions/checkout@v4.1.6
         with:
           token: ${{ secrets.PAT }}
           fetch-depth: 0
 
       - name: Get Next Version
+        if: "${{ ! startsWith(github.event.head_commit.message, 'docs: update changelogs & version for ') }}"
         id: semver
         uses: ietf-tools/semver-action@v1.8.0
         with:
@@ -28,13 +29,13 @@ jobs:
           noNewCommitBehavior: silent
 
       - name: Update debian/control
-        if: ${{ steps.semver.outputs.next != '' }}
+        if: "${{ ! startsWith(github.event.head_commit.message, 'docs: update changelogs & version for ') && steps.semver.outputs.next != '' }}"
         run: |
           VERSION=$(echo ${{ steps.semver.outputs.next }} | sed 's/^v//')
           sed "/^Version:/c\\Version:\ ${VERSION}" -i debian/control
 
       - name: Update debian/changelog
-        if: ${{ steps.semver.outputs.next != '' }}
+        if: "${{ ! startsWith(github.event.head_commit.message, 'docs: update changelogs & version for ') && steps.semver.outputs.next != '' }}"
         uses: orhun/git-cliff-action@v3
         with:
           config: .cliff.debian.toml
@@ -43,7 +44,7 @@ jobs:
           OUTPUT: debian/changelog
 
       - name: Update CHANGELOG.md
-        if: ${{ steps.semver.outputs.next != '' }}
+        if: "${{ ! startsWith(github.event.head_commit.message, 'docs: update changelogs & version for ') && steps.semver.outputs.next != '' }}"
         uses: orhun/git-cliff-action@v3
         with:
           config: .cliff.git.toml
@@ -52,7 +53,7 @@ jobs:
           OUTPUT: CHANGELOG.md
 
       - uses: EndBug/add-and-commit@v9.1.4
-        if: ${{ steps.semver.outputs.next != '' }}
+        if: "${{ ! startsWith(github.event.head_commit.message, 'docs: update changelogs & version for ') && steps.semver.outputs.next != '' }}"
         with:
           add: 'CHANGELOG.md debian/changelog debian/control'
           commit: --signoff
