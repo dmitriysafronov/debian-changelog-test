@@ -35,7 +35,7 @@ jobs:
 
       - name: Change distribution to focal
         run: |
-          sed '|)\ unstable;|)\ focal;|g' -i debian/changelog
+          sed 's|)\ unstable;|)\ focal;|g' -i debian/changelog
 
       - name: Build source package
         uses: jtdor/build-deb-action@v1.8.0
