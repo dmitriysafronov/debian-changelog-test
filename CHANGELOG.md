@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [8.0.0] - 2024-06-13
+
+### 🚀 Features
+
+- [**breaking**] New commit & push action
+
 ## [7.0.4] - 2024-06-13
 
 ### 🚜 Refactor
