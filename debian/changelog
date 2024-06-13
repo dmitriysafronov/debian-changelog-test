@@ -1,6 +1,13 @@
+debian-changelog-test (5.0.0) unstable; urgency=medium
+
+  * [**breaking**] --latest --tag ${{ steps.semver.outputs.next }}
+  * [**breaking**] Combo changelogs
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 12:45:49 +0000
+
 debian-changelog-test (4.0.0) unstable; urgency=medium
 
   * [**breaking**] --unreleased
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 12:33:08 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 12:32:39 +0000
 
