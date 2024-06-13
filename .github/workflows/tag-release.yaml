@@ -41,6 +41,16 @@ jobs:
 
       - name: list files
         run: |
-          ls -la
-          ls -la debian
           ls -la debian/artifacts
+
+      - name: Publish to PPA
+        uses: yuezk/publish-ppa-package@dev
+        with:
+          repository: "zimniy/test"
+          gpg_private_key: ${{ secrets.PPA_GPG_PRIVATE_KEY }}
+          # gpg_passphrase: ${{ secrets.PPA_GPG_PASSPHRASE }}
+          tarball: debian/artifasts/*.tar.gz
+          debian_dir: debian
+          deb_email: "zimniy@cyberbrain.pw"
+          deb_fullname: "Dmitriy Safronov"
+          # revision: ${{ inputs.revision }}
