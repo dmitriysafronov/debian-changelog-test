@@ -2,13 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
-## [6.0.1] - 2024-06-13
+## [7.0.1] - 2024-06-13
 
 ### 🐛 Bug Fixes
 
-- Strip header/footer
+- Filename
+- Rename step
 
-## [unreleased]
+## [7.0.0] - 2024-06-13
+
+### 🚀 Features
+
+- [**breaking**] Test tag
+
+## [6.0.1] - 2024-06-13
 
 ### 🐛 Bug Fixes
 
