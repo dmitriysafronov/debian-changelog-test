@@ -4,9 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## [8.1.0] - 2024-06-13
 
-### 🐛 Bug Fixes
+### 🚀 Features
 
-- Skip ci
+- Fetch = true
 
 ## [8.1.0] - 2024-06-13
 
@@ -14,6 +14,10 @@ All notable changes to this project will be documented in this file.
 
 - Pin version, add file list
 - Test readme
+
+### 🐛 Bug Fixes
+
+- Skip ci
 
 ## [8.0.1] - 2024-06-13
 

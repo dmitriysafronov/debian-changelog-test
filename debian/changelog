@@ -1,15 +1,16 @@
 debian-changelog-test (8.1.0) unstable; urgency=medium
 
-  * Skip ci
+  * Fetch = true
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 14:02:40 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 14:04:23 +0000
 
 debian-changelog-test (8.1.0) unstable; urgency=medium
 
+  * Skip ci
   * Pin version, add file list
   * Test readme
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 14:02:40 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 14:04:23 +0000
 
 debian-changelog-test (8.0.1) unstable; urgency=medium
 
