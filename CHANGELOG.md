@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [8.4.0] - 2024-06-13
+
+### 🚀 Features
+
+- Rebase only on changelog changes
+
 ## [8.3.5] - 2024-06-13
 
 ### 🐛 Bug Fixes
