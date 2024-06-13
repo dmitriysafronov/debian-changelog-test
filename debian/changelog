@@ -1,6 +1,6 @@
-debian-changelog-test (2.0.0) unstable; urgency=medium
+debian-changelog-test (4.0.0) unstable; urgency=medium
 
-  * [**breaking**] Update pipelines
+  * [**breaking**] --unreleased
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 12:05:33 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 12:33:08 +0000
 
