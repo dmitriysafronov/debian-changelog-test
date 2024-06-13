@@ -10,6 +10,7 @@ jobs:
   merge:
     name: Push Create Tag
     runs-on: ubuntu-latest
+    if: "${{ ! startsWith(github.event.head_commit.message, 'docs: update changelogs & version for ') }}"
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.6
@@ -74,6 +75,6 @@ jobs:
           commit: --signoff
           default_author: github_actor
           fetch: false
-          message: 'docs: update changelogs & version for ${{ steps.semver.outputs.next }} [skip ci]'
+          message: 'docs: update changelogs & version for ${{ steps.semver.outputs.next }}'
           tag: '${{ steps.semver.outputs.next }} --force'
           tag_push: '--force'
