@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [9.0.0] - 2024-06-13
+
+### 🚀 Features
+
+- [**breaking**] Env vars
+
 ## [8.7.2] - 2024-06-13
 
 ### 🚜 Refactor
