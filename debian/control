@@ -8,7 +8,7 @@ Package: test
 Architecture: all
 Section: metapackages
 Priority: optional
-Version: 8.3.0
+Version: 8.3.2
 # Pre-Depends: <comma-separated list of packages>
 Depends: vanilla-gnome-desktop
 Recommends: gnome-firmware
