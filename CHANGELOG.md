@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [8.3.4] - 2024-06-13
+
+### 🐛 Bug Fixes
+
+- Debian/rules
+
 ## [8.3.3] - 2024-06-13
 
 ### 🐛 Bug Fixes
