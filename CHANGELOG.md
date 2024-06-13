@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [8.5.0] - 2024-06-13
+
+### 🚀 Features
+
+- Publish
+
 ## [8.4.3] - 2024-06-13
 
 ### 🚜 Refactor

@@ -1,8 +1,14 @@
+debian-changelog-test (8.5.0) unstable; urgency=medium
+
+  * Publish
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 15:21:58 +0000
+
 debian-changelog-test (8.4.3) unstable; urgency=medium
 
   * List files
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 15:10:28 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 15:10:30 +0000
 
 debian-changelog-test (8.4.2) unstable; urgency=medium
 
