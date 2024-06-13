@@ -56,7 +56,7 @@ jobs:
         uses: orhun/git-cliff-action@v3
         id: changelog-release
         with:
-          config: cliff.git.toml
+          config: cliff.release.toml
           args: --current --strip all
         env:
           OUTPUT: .CHANGELOG.md
