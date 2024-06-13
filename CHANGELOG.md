@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [9.1.0] - 2024-06-13
+
+### 🚀 Features
+
+- Sed var
+
 ## [9.0.3] - 2024-06-13
 
 ### 🐛 Bug Fixes
