@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [7.0.2] - 2024-06-13
+
+### 🚜 Refactor
+
+- Rename step
+
 ## [7.0.1] - 2024-06-13
 
 ### 🐛 Bug Fixes
