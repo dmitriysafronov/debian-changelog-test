@@ -1,8 +1,14 @@
+debian-changelog-test (9.0.3) unstable; urgency=medium
+
+  * Typo
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 20:45:45 +0000
+
 debian-changelog-test (9.0.2) unstable; urgency=medium
 
   * Focal)
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 20:42:30 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 20:42:31 +0000
 
 debian-changelog-test (9.0.1) unstable; urgency=medium
 
