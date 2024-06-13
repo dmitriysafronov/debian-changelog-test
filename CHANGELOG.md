@@ -6,12 +6,13 @@ All notable changes to this project will be documented in this file.
 
 ### 🐛 Bug Fixes
 
-- Break the loop
+- Condition
 
 ## [8.0.1] - 2024-06-13
 
 ### 🐛 Bug Fixes
 
+- Break the loop
 - Tag name
 
 ## [8.0.0] - 2024-06-13
