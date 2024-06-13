@@ -1,8 +1,14 @@
+debian-changelog-test (8.6.1) unstable; urgency=medium
+
+  * Xz -> *
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 17:04:04 +0000
+
 debian-changelog-test (8.6.0) unstable; urgency=medium
 
   * Series & extra_series
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 16:14:18 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 16:14:19 +0000
 
 debian-changelog-test (8.5.2) unstable; urgency=medium
 

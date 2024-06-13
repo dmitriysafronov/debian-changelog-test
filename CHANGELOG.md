@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [8.6.1] - 2024-06-13
+
+### 🐛 Bug Fixes
+
+- Xz -> *
+
 ## [8.6.0] - 2024-06-13
 
 ### 🚀 Features
