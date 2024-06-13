@@ -23,17 +23,6 @@ jobs:
         env:
           OUTPUT: .CHANGELOG.md
 
-      - name: Build source package
-        uses: jtdor/build-deb-action@v1.8.0
-        env:
-          DEB_BUILD_OPTIONS: noautodbgsym
-        with:
-          buildpackage-opts: --build=source
-
-      - name: List files
-        run: |
-          ls -la debian/artifacts
-
       - name: Create Release
         uses: ncipollo/release-action@v1.14.0
         with:
@@ -43,7 +32,17 @@ jobs:
           name: ${{ github.ref_name }}
           body: ${{ steps.changelog-release.outputs.content }}
           token: ${{ secrets.PAT }}
-          artifacts: 'debian/artifacts/*'
+
+      - name: Change distribution to focal
+        run: |
+          sed '|)\ unstable;|)\ focal;|g' -i debian/changelog
+
+      - name: Build source package
+        uses: jtdor/build-deb-action@v1.8.0
+        env:
+          DEB_BUILD_OPTIONS: noautodbgsym
+        with:
+          buildpackage-opts: --build=source
 
       - name: Publish to PPA
         uses: yuezk/publish-ppa-package@v2.0.0
