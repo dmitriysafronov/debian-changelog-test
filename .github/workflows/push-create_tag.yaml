@@ -98,7 +98,7 @@ jobs:
           config: .cliff.git.toml
           args: --tag ${{ steps.semver.outputs.next }}
         env:
-          OUTPUT: .CHANGELOG.md
+          OUTPUT: CHANGELOG.md
 
       - name: Commit changelogs
         if: ${{ steps.semver.outputs.next != '' }}
