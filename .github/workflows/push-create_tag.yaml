@@ -41,20 +41,19 @@ jobs:
         env:
           OUTPUT: .debian-changelog.unreleased
 
-      - name: Update temporary (latest) debian/changelog
+      - name: Update temporary debian/changelog
         if: ${{ steps.semver.outputs.next != '' }}
         uses: orhun/git-cliff-action@v3
         with:
           config: .cliff.debian.toml
-          args: --latest --tag ${{ steps.semver.outputs.next }}
         env:
-          OUTPUT: .debian-changelog.latest
+          OUTPUT: .debian-changelog.temp
 
       - name: Update debian/control
         if: ${{ steps.semver.outputs.next != '' }}
         run: |
           cat .debian-changelog.unreleased > debian/changelog
-          cat .debian-changelog.latest >> debian/changelog
+          cat .debian-changelog.temp >> debian/changelog
           rm -rfv .debian-changelog.*
 
       - name: Update temporary (unreleased) CHANGELOG.md
@@ -66,20 +65,19 @@ jobs:
         env:
           OUTPUT: .CHANGELOG.md.unreleased
 
-      - name: Update temporary (latest) CHANGELOG.md
+      - name: Update temporary CHANGELOG.md
         if: ${{ steps.semver.outputs.next != '' }}
         uses: orhun/git-cliff-action@v3
         with:
           config: .cliff.git.toml
-          args: --latest --tag ${{ steps.semver.outputs.next }}
         env:
-          OUTPUT: .CHANGELOG.md.latest
+          OUTPUT: .CHANGELOG.md.temp
 
       - name: Update CHANGELOG.md
         if: ${{ steps.semver.outputs.next != '' }}
         run: |
           cat .CHANGELOG.md.unreleased > CHANGELOG.md
-          cat .CHANGELOG.md.latest >> CHANGELOG.md
+          cat .CHANGELOG.md.temp >> CHANGELOG.md
           rm -rfv .CHANGELOG.md.*
 
       - name: Commit changelogs
