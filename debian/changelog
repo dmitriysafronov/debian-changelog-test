@@ -1,8 +1,14 @@
+debian-changelog-test (8.3.5) unstable; urgency=medium
+
+  * Debian/rules tab
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 14:56:02 +0000
+
 debian-changelog-test (8.3.4) unstable; urgency=medium
 
   * Debian/rules
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 14:53:11 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 14:53:12 +0000
 
 debian-changelog-test (8.3.3) unstable; urgency=medium
 
