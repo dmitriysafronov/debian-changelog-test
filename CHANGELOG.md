@@ -4,14 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## [8.1.0] - 2024-06-13
 
-### 🚀 Features
+### 🐛 Bug Fixes
 
-- Pin version, add file list
+- Skip ci
 
 ## [8.1.0] - 2024-06-13
 
 ### 🚀 Features
 
+- Pin version, add file list
 - Test readme
 
 ## [8.0.1] - 2024-06-13
