@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [8.4.3] - 2024-06-13
+
+### 🚜 Refactor
+
+- List files
+
 ## [8.4.2] - 2024-06-13
 
 ### 🐛 Bug Fixes
