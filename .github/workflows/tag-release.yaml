@@ -53,4 +53,6 @@ jobs:
           debian_dir: debian
           deb_email: "zimniy@cyberbrain.pw"
           deb_fullname: "Dmitriy Safronov"
+          series: "mantic"
+          extra_series: "jammy noble"
           # revision: ${{ inputs.revision }}
