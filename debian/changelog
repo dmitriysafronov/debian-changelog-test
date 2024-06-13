@@ -1,3 +1,9 @@
+debian-changelog-test (0.6.0) unstable; urgency=medium
+
+  * cliff
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 11:24:12 +0000
+
 debian-changelog-test (0.5.0) unstable; urgency=medium
 
   * change version & commit message
@@ -13,28 +19,35 @@ debian-changelog-test (0.4.0) unstable; urgency=medium
 debian-changelog-test (0.3.0) unstable; urgency=medium
 
   * improve tag workflow (#48)
+  * update changelogs for v0.2.1
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 10:41:52 +0000
 
 debian-changelog-test (0.2.1) unstable; urgency=medium
 
   * release (#47)
+  * update changelogs for v0.2.0
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 11 Jun 2024 16:53:39 +0000
 
 debian-changelog-test (0.2.0) unstable; urgency=medium
 
   * rm unused (#46)
+  * update changelogs for v0.1.0
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 11 Jun 2024 16:44:21 +0000
 
 debian-changelog-test (0.1.0) unstable; urgency=medium
 
+  * update changelogs for v0.1.0
   * changelog (#44)
+  * update changelogs for v0.1.0
   * cat -> echo (test-40) (#43)
   * test-38 (#42)
+  * update CHANGELOG.md for v0.1.0
   * test changelog (#40)
   * no skip ci
+  * update CHANGELOG.md for v0.0.4 [skip ci]
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 11 Jun 2024 16:31:16 +0000
 
