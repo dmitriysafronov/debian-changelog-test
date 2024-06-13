@@ -91,7 +91,7 @@ jobs:
       #     cat .CHANGELOG.md.temp >> CHANGELOG.md
       #     rm -rfv .CHANGELOG.md.*
 
-      - name: Update temporary CHANGELOG.md
+      - name: Update CHANGELOG.md
         if: ${{ steps.semver.outputs.next != '' }}
         uses: orhun/git-cliff-action@v3
         with:
