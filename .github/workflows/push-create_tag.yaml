@@ -38,7 +38,7 @@ jobs:
         id: changelog-debian
         with:
           config: .cliff.debian.toml
-          args: --latest --tag ${{ steps.semver.outputs.next }}
+          args: --unreleased --tag ${{ steps.semver.outputs.next }}
         env:
           OUTPUT: debian/changelog
 
@@ -48,7 +48,7 @@ jobs:
         id: changelog-git
         with:
           config: .cliff.git.toml
-          args: --latest --tag ${{ steps.semver.outputs.next }}
+          args: --unreleased  --tag ${{ steps.semver.outputs.next }}
         env:
           OUTPUT: CHANGELOG.md
 
