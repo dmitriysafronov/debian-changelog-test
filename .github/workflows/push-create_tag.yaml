@@ -26,6 +26,40 @@ jobs:
           noVersionBumpBehavior: silent
           noNewCommitBehavior: silent
 
+      - name: Update debian/control
+        if: ${{ steps.semver.outputs.next != '' }}
+        run: |
+          VERSION=$(echo ${{ steps.semver.outputs.next }} | sed 's/^v//')
+          sed "/^Version:/c\\Version:\ ${VERSION}" -i debian/control
+
+      - name: Update debian/changelog
+        if: ${{ steps.semver.outputs.next != '' }}
+        uses: orhun/git-cliff-action@v3
+        id: changelog-debian
+        with:
+          config: .cliff.debian.toml
+          args: --latest --tag ${{ steps.semver.outputs.next }}
+        env:
+          OUTPUT: debian/changelog
+
+      - name: Update CHANGELOG.md
+        if: ${{ steps.semver.outputs.next != '' }}
+        uses: orhun/git-cliff-action@v3
+        id: changelog-git
+        with:
+          config: .cliff.git.toml
+          args: --latest --tag ${{ steps.semver.outputs.next }}
+        env:
+          OUTPUT: CHANGELOG.md
+
+      - name: Commit changelogs
+        if: ${{ steps.semver.outputs.next != '' }}
+        uses: stefanzweifel/git-auto-commit-action@v5.0.1
+        with:
+          branch: main
+          commit_message: 'docs: update changelogs & version for ${{ steps.semver.outputs.nextStrict }}'
+          file_pattern: CHANGELOG.md debian/changelog debian/control
+
       - name: "Create New Tag"
         if: ${{ steps.semver.outputs.next != '' }}
         uses: mathieudutour/github-tag-action@v6.2
