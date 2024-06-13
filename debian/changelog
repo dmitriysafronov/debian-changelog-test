@@ -1,8 +1,14 @@
+debian-changelog-test (9.1.1) unstable; urgency=medium
+
+  * Disable temp
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 20:55:45 +0000
+
 debian-changelog-test (9.1.0) unstable; urgency=medium
 
   * Sed var
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 20:49:21 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 20:49:22 +0000
 
 debian-changelog-test (9.0.3) unstable; urgency=medium
 
