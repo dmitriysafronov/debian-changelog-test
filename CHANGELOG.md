@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [8.3.3] - 2024-06-13
+
+### 🐛 Bug Fixes
+
+- Package name & version
+
 ## [8.3.2] - 2024-06-13
 
 ### 🐛 Bug Fixes
