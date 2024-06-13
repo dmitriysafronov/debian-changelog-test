@@ -100,7 +100,7 @@ jobs:
         env:
           OUTPUT: CHANGELOG.md
 
-      - name: Commit changelogs
+      - name: Commit changelogs & version
         if: ${{ steps.semver.outputs.next != '' }}
         uses: stefanzweifel/git-auto-commit-action@v5.0.1
         with:
