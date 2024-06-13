@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [8.3.0] - 2024-06-13
+
+### 🚀 Features
+
+- Build debian package
+
 ## [8.2.0] - 2024-06-13
 
 ### 🚀 Features
