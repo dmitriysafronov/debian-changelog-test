@@ -18,3 +18,5 @@ Recommends: gnome-firmware
 # Suggests: <comma-separated list of packages>
 # Provides: <comma-separated list of packages>
 # Replaces: <comma-separated list of packages>
+
+Source: test
