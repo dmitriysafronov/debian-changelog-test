@@ -1,8 +1,14 @@
+debian-changelog-test (7.0.3) unstable; urgency=medium
+
+  * Cleanup workflows
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 13:17:21 +0000
+
 debian-changelog-test (7.0.2) unstable; urgency=medium
 
   * Rename step
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 13:14:34 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 13:14:07 +0000
 
 debian-changelog-test (7.0.1) unstable; urgency=medium
 

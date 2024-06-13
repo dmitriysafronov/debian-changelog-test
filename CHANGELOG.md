@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [7.0.3] - 2024-06-13
+
+### 🚜 Refactor
+
+- Cleanup workflows
+
 ## [7.0.2] - 2024-06-13
 
 ### 🚜 Refactor
