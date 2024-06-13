@@ -4,14 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## [8.0.1] - 2024-06-13
 
-### 🐛 Bug Fixes
+### 🚜 Refactor
 
-- Condition
+- README.md
 
 ## [8.0.1] - 2024-06-13
 
 ### 🐛 Bug Fixes
 
+- Condition
 - Break the loop
 - Tag name
 

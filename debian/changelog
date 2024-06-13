@@ -1,15 +1,16 @@
 debian-changelog-test (8.0.1) unstable; urgency=medium
 
-  * Condition
+  * README.md
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 13:50:50 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 13:54:20 +0000
 
 debian-changelog-test (8.0.1) unstable; urgency=medium
 
+  * Condition
   * Break the loop
   * Tag name
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 13:50:50 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 13:54:20 +0000
 
 debian-changelog-test (8.0.0) unstable; urgency=medium
 
