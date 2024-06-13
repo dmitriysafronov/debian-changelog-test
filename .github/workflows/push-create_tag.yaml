@@ -37,7 +37,7 @@ jobs:
         uses: orhun/git-cliff-action@v3
         with:
           config: .cliff.debian.toml
-          args: --unreleased --tag ${{ steps.semver.outputs.next }}
+          args: --strip footer --unreleased --tag ${{ steps.semver.outputs.next }}
         env:
           OUTPUT: .debian-changelog.unreleased
 
@@ -46,6 +46,7 @@ jobs:
         uses: orhun/git-cliff-action@v3
         with:
           config: .cliff.debian.toml
+          args: --strip header
         env:
           OUTPUT: .debian-changelog.temp
 
@@ -61,7 +62,7 @@ jobs:
         uses: orhun/git-cliff-action@v3
         with:
           config: .cliff.git.toml
-          args: --unreleased  --tag ${{ steps.semver.outputs.next }}
+          args: --strip footer --unreleased  --tag ${{ steps.semver.outputs.next }}
         env:
           OUTPUT: .CHANGELOG.md.unreleased
 
@@ -70,6 +71,7 @@ jobs:
         uses: orhun/git-cliff-action@v3
         with:
           config: .cliff.git.toml
+          args: --strip header
         env:
           OUTPUT: .CHANGELOG.md.temp
 
