@@ -1,107 +1,35 @@
-test (0.2.1) unstable; urgency=medium
+debian-changelog-test (0.3.0) unstable; urgency=medium
 
-  [ dmitriysafronov ]
-  * docs: update CHANGELOG.md for v0.0.4 [skip ci]
+  * improve tag workflow (#48)
 
-  [ Dmitriy Safronov ]
-  * feature: no skip ci.
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-  * feature: test changelog (#40)
-    * feature: test changelog
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    * Apply automatic changes
-    Signed-off-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-    * feature: test
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    * Apply automatic changes
-    Signed-off-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-    ---------
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    Signed-off-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-    Co-authored-by: dmitriysafronov <dmitriysafronov@users.noreply.github.com>
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 10:41:52 +0000
 
-  [ dmitriysafronov ]
-  * docs: update CHANGELOG.md for v0.1.0
+debian-changelog-test (0.2.1) unstable; urgency=medium
 
-  [ Dmitriy Safronov ]
-  * Test 100500 (#41)
-    * test
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    * feature: test
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    ---------
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-  * feature: test-38 (#42)
-    * feature: test-38
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    * fix: bump
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    * Apply automatic changes
-    Signed-off-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-    ---------
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    Signed-off-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-    Co-authored-by: dmitriysafronov <dmitriysafronov@users.noreply.github.com>
-  * fix: cat -> echo (test-40) (#43)
-    * fix: cat -> echo (test-40)
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    * bug: cat -> echo
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    * fix: cat -> echo
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    * Apply automatic changes
-    Signed-off-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-    ---------
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    Signed-off-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-    Co-authored-by: dmitriysafronov <dmitriysafronov@users.noreply.github.com>
+  * release (#47)
 
-  [ dmitriysafronov ]
-  * docs: update changelogs for v0.1.0
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 11 Jun 2024 16:53:39 +0000
 
-  [ Dmitriy Safronov ]
-  * feature: changelog (#44)
-    * feature: changelog
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    * fix: depth: 0
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    ---------
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+debian-changelog-test (0.2.0) unstable; urgency=medium
 
-  [ dmitriysafronov ]
-  * docs: update changelogs for v0.1.0
+  * rm unused (#46)
 
-  [ Dmitriy Safronov ]
-  * festure: test-42 (#45)
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 11 Jun 2024 16:44:21 +0000
 
-  [ dmitriysafronov ]
-  * docs: update changelogs for v0.1.0
+debian-changelog-test (0.1.0) unstable; urgency=medium
 
-  [ Dmitriy Safronov ]
-  * feature: rm unused (#46)
-    * feature: rm unused
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    * fix: test
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    * fix: silent
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    * fix: pat
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
-    ---------
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+  * changelog (#44)
+  * cat -> echo (test-40) (#43)
+  * test-38 (#42)
+  * test changelog (#40)
+  * no skip ci
 
-  [ dmitriysafronov ]
-  * docs: update changelogs for v0.2.0
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 11 Jun 2024 16:31:16 +0000
 
-  [ Dmitriy Safronov ]
-  * fix: release (#47)
-    Signed-off-by: Dmitriy Safronov <zimniy@cyberbrain.pw>
+debian-changelog-test (0.0.4) unstable; urgency=medium
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 11 Jun 2024 16:54:17 +0000
+  * workflows (#32)
+  * 15
 
-test (0.0.4) unstable; urgency=medium
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 11 Jun 2024 15:40:56 +0000
 
-  * Initial
-
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 10 Jun 2024 21:10:11 +0000
