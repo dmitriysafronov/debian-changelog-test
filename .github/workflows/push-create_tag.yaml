@@ -112,7 +112,7 @@ jobs:
       
           # The message for the commit.
           # Default: 'Commit from GitHub Actions (name of the workflow)'
-          message: 'docs: update changelogs & version for ${{ steps.semver.outputs.nextStrict }}'
+          message: 'docs: update changelogs & version for ${{ steps.semver.outputs.next }}'
       
           # If this input is set, the action will push the commit to a new branch with this name.
           # Default: ''
@@ -139,7 +139,7 @@ jobs:
       
           # Arguments for the git tag command (the tag name always needs to be the first word not preceded by an hyphen)
           # Default: ''
-          tag: '${{ steps.semver.outputs.nextStrict }} --force'
+          tag: '${{ steps.semver.outputs.next }} --force'
       
           # Arguments for the git push --tags command (any additional argument will be added after --tags)
           # Default: ''
