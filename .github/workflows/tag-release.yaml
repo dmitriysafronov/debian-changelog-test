@@ -48,8 +48,7 @@ jobs:
         with:
           repository: "zimniy/test"
           gpg_private_key: ${{ secrets.PPA_GPG_PRIVATE_KEY }}
-          # gpg_passphrase: ${{ secrets.PPA_GPG_PASSPHRASE }}
-          gpg_passphrase: ''
+          gpg_passphrase: ${{ secrets.PPA_GPG_PASSPHRASE }}
           tarball: debian/artifacts/*.tar.gz
           debian_dir: debian
           deb_email: "zimniy@cyberbrain.pw"
