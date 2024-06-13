@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [8.4.2] - 2024-06-13
+
+### 🐛 Bug Fixes
+
+- Debian/source/format: 3.0 (native)
+
 ## [8.4.1] - 2024-06-13
 
 ### 🐛 Bug Fixes
