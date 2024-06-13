@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [9.1.9] - 2024-06-13
+
+### 🚜 Refactor
+
+- Update .cliff.debian.toml
+
 ## [9.1.8] - 2024-06-13
 
 ### 🚜 Refactor
