@@ -38,7 +38,7 @@ jobs:
         id: changelog-debian
         with:
           config: .cliff.debian.toml
-          args: --current
+          args: --latest
         env:
           OUTPUT: debian/changelog
 
@@ -48,7 +48,7 @@ jobs:
         id: changelog-git
         with:
           config: .cliff.git.toml
-          args: --current
+          args: --latest
         env:
           OUTPUT: CHANGELOG.md
 
