@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
 
       - name: Update release description .CHANGELOG.md
-        uses: orhun/git-cliff-action@v3
+        uses: orhun/git-cliff-action@v3.2.0
         id: changelog-release
         with:
           config: .cliff.release.toml
@@ -23,13 +23,14 @@ jobs:
         env:
           OUTPUT: .CHANGELOG.md
 
-      - uses: jtdor/build-deb-action@v1
+      - name: Build source package
+        uses: jtdor/build-deb-action@v1.8.0
         env:
           DEB_BUILD_OPTIONS: noautodbgsym
         with:
           buildpackage-opts: --build=source
 
-      - name: list files
+      - name: List files
         run: |
           ls -la debian/artifacts
 
@@ -45,7 +46,7 @@ jobs:
           artifacts: 'debian/artifacts/*'
 
       - name: Publish to PPA
-        uses: yuezk/publish-ppa-package@dev
+        uses: yuezk/publish-ppa-package@v2.0.0
         with:
           repository: "zimniy/test"
           gpg_private_key: ${{ secrets.PPA_GPG_PRIVATE_KEY }}
