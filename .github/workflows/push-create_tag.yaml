@@ -51,27 +51,10 @@ jobs:
         env:
           OUTPUT: CHANGELOG.md
 
-      # - name: Commit changelogs & version
-      #   if: ${{ steps.semver.outputs.next != '' }}
-      #   uses: stefanzweifel/git-auto-commit-action@v5.0.1
-      #   with:
-      #     branch: main
-      #     commit_message: 'docs: update changelogs & version for ${{ steps.semver.outputs.nextStrict }}'
-      #     file_pattern: CHANGELOG.md debian/changelog debian/control
-
-      # - name: "Create New Tag"
-      #   if: ${{ steps.semver.outputs.next != '' }}
-      #   uses: mathieudutour/github-tag-action@v6.2
-      #   with:
-      #     github_token: ${{ secrets.PAT }}
-      #     custom_tag: ${{ steps.semver.outputs.next }}
-      #     tag_prefix: ""
-
-
-      - uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
+      - uses: EndBug/add-and-commit@v9.1.4
         if: ${{ steps.semver.outputs.next != '' }}
         with:
-          # add: 'CHANGELOG.md debian/changelog debian/control'
+          add: 'CHANGELOG.md debian/changelog debian/control'
           commit: --signoff
           default_author: github_actor
           fetch: false
