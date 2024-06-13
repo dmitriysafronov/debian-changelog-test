@@ -1,8 +1,14 @@
+debian-changelog-test (8.5.2) unstable; urgency=medium
+
+  * Passphrase
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 15:45:06 +0000
+
 debian-changelog-test (8.5.1) unstable; urgency=medium
 
   * Passphrase
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 15:25:12 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 15:25:13 +0000
 
 debian-changelog-test (8.5.0) unstable; urgency=medium
 

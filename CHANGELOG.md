@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [8.5.2] - 2024-06-13
+
+### 🐛 Bug Fixes
+
+- Passphrase
+
 ## [8.5.1] - 2024-06-13
 
 ### 🐛 Bug Fixes
