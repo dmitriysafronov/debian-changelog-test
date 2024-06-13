@@ -1,8 +1,14 @@
+debian-changelog-test (8.7.1) unstable; urgency=medium
+
+  * Pin versions
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 17:12:06 +0000
+
 debian-changelog-test (8.7.0) unstable; urgency=medium
 
   * Artifacts
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 17:08:17 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 17:08:18 +0000
 
 debian-changelog-test (8.6.1) unstable; urgency=medium
 
