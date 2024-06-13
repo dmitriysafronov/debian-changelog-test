@@ -33,9 +33,9 @@ jobs:
           body: ${{ steps.changelog-release.outputs.content }}
           token: ${{ secrets.PAT }}
 
-      - name: Change distribution to focal
+      - name: Change distribution to lowest supported
         run: |
-          sed 's|)\ unstable;|)\ focal;|g' -i debian/changelog
+          sed 's|)\ unstable;|)\ ${{ vars.PPA_SERIES }};|g' -i debian/changelog
 
       - name: Build source package
         uses: jtdor/build-deb-action@v1.8.0
