@@ -2,11 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## [8.0.1] - 2024-06-13
+## [8.1.0] - 2024-06-13
 
-### 🚜 Refactor
+### 🚀 Features
 
-- README.md
+- Test readme
 
 ## [8.0.1] - 2024-06-13
 
@@ -15,6 +15,10 @@ All notable changes to this project will be documented in this file.
 - Condition
 - Break the loop
 - Tag name
+
+### 🚜 Refactor
+
+- README.md
 
 ## [8.0.0] - 2024-06-13
 
