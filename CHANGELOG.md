@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [9.0.2] - 2024-06-13
+
+### 🐛 Bug Fixes
+
+- Focal)
+
 ## [9.0.1] - 2024-06-13
 
 ### 🐛 Bug Fixes
