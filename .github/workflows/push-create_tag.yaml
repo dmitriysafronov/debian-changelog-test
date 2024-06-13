@@ -32,25 +32,55 @@ jobs:
           VERSION=$(echo ${{ steps.semver.outputs.next }} | sed 's/^v//')
           sed "/^Version:/c\\Version:\ ${VERSION}" -i debian/control
 
-      - name: Update debian/changelog
+      - name: Update temporary (unreleased) debian/changelog
         if: ${{ steps.semver.outputs.next != '' }}
         uses: orhun/git-cliff-action@v3
-        id: changelog-debian
         with:
           config: .cliff.debian.toml
           args: --unreleased --tag ${{ steps.semver.outputs.next }}
         env:
-          OUTPUT: debian/changelog
+          OUTPUT: .debian-changelog.unreleased
 
-      - name: Update CHANGELOG.md
+      - name: Update temporary (current) debian/changelog
         if: ${{ steps.semver.outputs.next != '' }}
         uses: orhun/git-cliff-action@v3
-        id: changelog-git
+        with:
+          config: .cliff.debian.toml
+          args: --current
+        env:
+          OUTPUT: .debian-changelog.current
+
+      - name: Update debian/control
+        if: ${{ steps.semver.outputs.next != '' }}
+        run: |
+          cat .debian-changelog.unreleased > debian/changelog
+          cat .debian-changelog.current >> debian/changelog
+          rm -rfv .debian-changelog.*
+
+      - name: Update temporary (unreleased) CHANGELOG.md
+        if: ${{ steps.semver.outputs.next != '' }}
+        uses: orhun/git-cliff-action@v3
         with:
           config: .cliff.git.toml
           args: --unreleased  --tag ${{ steps.semver.outputs.next }}
         env:
-          OUTPUT: CHANGELOG.md
+          OUTPUT: .CHANGELOG.md.unreleased
+
+      - name: Update temporary (current) CHANGELOG.md
+        if: ${{ steps.semver.outputs.next != '' }}
+        uses: orhun/git-cliff-action@v3
+        with:
+          config: .cliff.git.toml
+          args: --current
+        env:
+          OUTPUT: .CHANGELOG.md.current
+
+      - name: Update CHANGELOG.md
+        if: ${{ steps.semver.outputs.next != '' }}
+        run: |
+          cat .CHANGELOG.md.unreleased > CHANGELOG.md
+          cat .CHANGELOG.md.current >> CHANGELOG.md
+          rm -rfv .CHANGELOG.md.*
 
       - name: Commit changelogs
         if: ${{ steps.semver.outputs.next != '' }}
