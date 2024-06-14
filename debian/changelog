@@ -1,7 +1,12 @@
+debian-changelog-test (9.2.0) unstable; urgency=low
+ * Fake revision
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Fri, 14 Jun 2024 07:11:00 +0000
+
 debian-changelog-test (9.1.11) unstable; urgency=low
  * Update .cliff.debian.toml
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Fri, 14 Jun 2024 00:12:05 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Fri, 14 Jun 2024 00:12:06 +0000
 
 debian-changelog-test (9.1.10) unstable; urgency=low
  * Update .cliff.debian.toml
