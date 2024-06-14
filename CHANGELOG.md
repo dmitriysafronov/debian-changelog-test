@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [9.2.1] - 2024-06-14
+
+### 🐛 Bug Fixes
+
+- Quilt
+
 ## [9.2.0] - 2024-06-14
 
 ### 🚀 Features
