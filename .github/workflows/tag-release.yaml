@@ -49,12 +49,12 @@ jobs:
           buildpackage-opts: --build=source
 
       - name: Publish to PPA
-        uses: yuezk/publish-ppa-package@v2.0.0
+        uses: dmitriysafronov/publish-ppa-package@main
         with:
           repository: ${{ vars.PPA_REPOSITORY }}
           gpg_private_key: ${{ secrets.PPA_GPG_PRIVATE_KEY }}
           gpg_passphrase: ${{ secrets.PPA_GPG_PASSPHRASE }}
-          tarball: debian/artifacts/*.tar.*
+          # tarball: debian/artifacts/*.tar.*
           debian_dir: debian
           deb_email: ${{ vars.PPA_EMAIL }}
           deb_fullname: ${{ vars.PPA_FULLNAME }}
