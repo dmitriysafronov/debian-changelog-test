@@ -33,9 +33,9 @@ jobs:
           body: ${{ steps.changelog-release.outputs.content }}
           token: ${{ secrets.PAT }}
 
-      - name: Add zero revision to latest changelog entry
-        run: |
-          sed 's|)\ unstable|-0)\ unstable|' -i debian/changelog
+      # - name: Add zero revision to latest changelog entry
+      #   run: |
+      #     sed 's|)\ unstable|-0)\ unstable|' -i debian/changelog
 
       - name: Change distribution to lowest supported
         run: |
