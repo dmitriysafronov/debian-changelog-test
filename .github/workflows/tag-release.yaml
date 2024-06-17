@@ -41,12 +41,12 @@ jobs:
         run: |
           sed 's|)\ unstable;|)\ ${{ vars.PPA_SERIES }};|g' -i debian/changelog
 
-      - name: Build source package
-        uses: jtdor/build-deb-action@v1.8.0
-        env:
-          DEB_BUILD_OPTIONS: noautodbgsym
-        with:
-          buildpackage-opts: --build=source
+      # - name: Build source package
+      #   uses: jtdor/build-deb-action@v1.8.0
+      #   env:
+      #     DEB_BUILD_OPTIONS: noautodbgsym
+      #   with:
+      #     buildpackage-opts: --build=source
 
       - name: Publish to PPA
         uses: dmitriysafronov/publish-ppa-package@main
