@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [9.3.3] - 2024-06-17
+
+### 🐛 Bug Fixes
+
+- Branch
+
 ## [9.3.2] - 2024-06-17
 
 ### 🐛 Bug Fixes
