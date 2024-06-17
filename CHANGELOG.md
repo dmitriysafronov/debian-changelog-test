@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [9.3.0] - 2024-06-17
+
+### 🚀 Features
+
+- New workflow
+
 ## [9.2.1] - 2024-06-14
 
 ### 🐛 Bug Fixes
