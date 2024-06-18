@@ -1,4 +1,4 @@
-name: Push Create Tag - main
+name: Push [create tag] main
 "on":
   push:
     branches:
@@ -8,7 +8,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   merge:
-    name: Push Create Tag - main
+    name: Push [create tag] main
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
