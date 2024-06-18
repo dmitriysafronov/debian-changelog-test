@@ -49,7 +49,7 @@ jobs:
       #     buildpackage-opts: --build=source
 
       - name: Publish to PPA
-        uses: dmitriysafronov/publish-ppa-package@main
+        uses: dmitriysafronov/publish-ppa-package@grouping-messages
         with:
           repository: ${{ vars.PPA_REPOSITORY }}
           gpg_private_key: ${{ secrets.PPA_GPG_PRIVATE_KEY }}
