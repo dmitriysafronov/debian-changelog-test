@@ -34,7 +34,7 @@ jobs:
           token: ${{ secrets.PAT }}
 
       - name: Publish to PPA
-        uses: dmitriysafronov/publish-ppa-package@grouping-messages
+        uses: dmitriysafronov/publish-ppa-package@main
         with:
           repository: ${{ vars.PPA_REPOSITORY }}
           gpg_private_key: ${{ secrets.PPA_GPG_PRIVATE_KEY }}
