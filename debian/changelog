@@ -1,7 +1,12 @@
+debian-changelog-test (9.3.6) unstable; urgency=low
+ * Debhelper-compat (= 12), action@main
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 05:58:13 +0000
+
 debian-changelog-test (9.3.5) unstable; urgency=low
  * Standards. debhelper-compat version
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 05:52:13 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 05:52:15 +0000
 
 debian-changelog-test (9.3.4) unstable; urgency=low
  * Format

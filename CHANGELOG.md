@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [9.3.6] - 2024-06-18
+
+### 🐛 Bug Fixes
+
+- Debhelper-compat (= 12), action@main
+
 ## [9.3.5] - 2024-06-18
 
 ### 🐛 Bug Fixes
