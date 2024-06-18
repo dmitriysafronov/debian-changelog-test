@@ -1,15 +1,14 @@
-name: Push Create Tag
+name: Push [create tag] develop
 "on":
   push:
     branches:
-      - main
       - develop
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   merge:
-    name: Push Create Tag
+    name: Push [create tag] develop
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -61,5 +60,5 @@ jobs:
           default_author: github_actor
           fetch: true
           message: 'docs: update changelogs & version for ${{ steps.semver.outputs.next }}'
-          tag: '${{ steps.semver.outputs.next }} --force'
+          tag: '${{ steps.semver.outputs.next }}-rc --force'
           tag_push: '--force'
