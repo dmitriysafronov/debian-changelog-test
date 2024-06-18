@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [9.3.7] - 2024-06-18
+
+### 🐛 Bug Fixes
+
+- Debian changelog
+
 ## [9.3.6] - 2024-06-18
 
 ### 🐛 Bug Fixes
