@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [9.5.0] - 2024-06-18
+
+### 🚀 Features
+
+- Workflows (#51)
+- Workflows (#50)
+
 ## [9.4.0] - 2024-06-18
 
 ### 🚀 Features

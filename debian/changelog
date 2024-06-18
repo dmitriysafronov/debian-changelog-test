@@ -1,9 +1,17 @@
+debian-changelog-test (9.5.0) unstable; urgency=low
+
+
+  * Workflows (#51)
+  * Workflows (#50)
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 09:10:46 +0000
+
 debian-changelog-test (9.4.0) unstable; urgency=low
 
 
   * Two branches
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 08:42:19 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 08:42:21 +0000
 
 debian-changelog-test (9.3.10) unstable; urgency=low
 
