@@ -1,15 +1,14 @@
-name: Push Create Tag
+name: Push Create Tag - develop
 "on":
   push:
     branches:
-      - main
       - develop
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   merge:
-    name: Push Create Tag
+    name: Push Create Tag - develop
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,7 +24,7 @@ jobs:
         uses: ietf-tools/semver-action@v1.8.0
         with:
           token: ${{ github.token }}
-          branch: main
+          branch: develop
           noVersionBumpBehavior: silent
           noNewCommitBehavior: silent
 
