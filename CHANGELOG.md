@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [9.4.2] - 2024-06-18
+
+### 🐛 Bug Fixes
+
+- \n
+
 ## [9.4.1] - 2024-06-18
 
 ### 🐛 Bug Fixes

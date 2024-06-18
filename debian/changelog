@@ -1,12 +1,16 @@
-debian-changelog-test (9.4.1) unstable; urgency=low
+debian-changelog-test (9.4.2) unstable; urgency=low
 
+  * \n
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 19:39:29 +0000
+
+debian-changelog-test (9.4.1) unstable; urgency=low
 
   * Remove unused (#58)
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 10:36:02 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 10:36:03 +0000
 
 debian-changelog-test (9.4.0) unstable; urgency=low
-
 
   * Two branches
 
@@ -14,13 +18,11 @@ debian-changelog-test (9.4.0) unstable; urgency=low
 
 debian-changelog-test (9.3.10) unstable; urgency=low
 
-
   * Remove unused
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 08:04:38 +0000
 
 debian-changelog-test (9.3.9) unstable; urgency=low
-
 
   * Remove unused
 
@@ -28,13 +30,11 @@ debian-changelog-test (9.3.9) unstable; urgency=low
 
 debian-changelog-test (9.3.8) unstable; urgency=low
 
-
   * Workflow grouping messages
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 06:26:56 +0000
 
 debian-changelog-test (9.3.7) unstable; urgency=low
-
 
   * Debian changelog
 
@@ -42,13 +42,11 @@ debian-changelog-test (9.3.7) unstable; urgency=low
 
 debian-changelog-test (9.3.6) unstable; urgency=low
 
-
   * Debhelper-compat (= 12), action@main
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 05:58:14 +0000
 
 debian-changelog-test (9.3.5) unstable; urgency=low
-
 
   * Standards. debhelper-compat version
 
@@ -56,13 +54,11 @@ debian-changelog-test (9.3.5) unstable; urgency=low
 
 debian-changelog-test (9.3.4) unstable; urgency=low
 
-
   * Format
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 17 Jun 2024 18:07:00 +0000
 
 debian-changelog-test (9.3.3) unstable; urgency=low
-
 
   * Branch
 
@@ -70,13 +66,11 @@ debian-changelog-test (9.3.3) unstable; urgency=low
 
 debian-changelog-test (9.3.2) unstable; urgency=low
 
-
   * Rm unused
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 17 Jun 2024 18:02:39 +0000
 
 debian-changelog-test (9.3.1) unstable; urgency=low
-
 
   * Rm unused
 
@@ -84,13 +78,11 @@ debian-changelog-test (9.3.1) unstable; urgency=low
 
 debian-changelog-test (9.3.0) unstable; urgency=low
 
-
   * New workflow
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Mon, 17 Jun 2024 17:59:06 +0000
 
 debian-changelog-test (9.2.1) unstable; urgency=low
-
 
   * Quilt
 
@@ -98,13 +90,11 @@ debian-changelog-test (9.2.1) unstable; urgency=low
 
 debian-changelog-test (9.2.0) unstable; urgency=low
 
-
   * Fake revision
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Fri, 14 Jun 2024 07:11:01 +0000
 
 debian-changelog-test (9.1.11) unstable; urgency=low
-
 
   * Update .cliff.debian.toml
 
@@ -112,13 +102,11 @@ debian-changelog-test (9.1.11) unstable; urgency=low
 
 debian-changelog-test (9.1.10) unstable; urgency=low
 
-
   * Update .cliff.debian.toml
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Fri, 14 Jun 2024 00:11:06 +0000
 
 debian-changelog-test (9.1.9) unstable; urgency=low
-
 
   * Update .cliff.debian.toml
 
@@ -126,13 +114,11 @@ debian-changelog-test (9.1.9) unstable; urgency=low
 
 debian-changelog-test (9.1.8) unstable; urgency=low
 
-
   * Update .cliff.debian.toml
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 23:55:50 +0000
 
 debian-changelog-test (9.1.7) unstable; urgency=low
-
 
   * Update .cliff.debian.toml
 
@@ -140,13 +126,11 @@ debian-changelog-test (9.1.7) unstable; urgency=low
 
 debian-changelog-test (9.1.6) unstable; urgency=low
 
-
   * Update .cliff.debian.toml
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 23:41:00 +0000
 
 debian-changelog-test (9.1.5) unstable; urgency=low
-
 
   * Update .cliff.debian.toml
 
@@ -154,13 +138,11 @@ debian-changelog-test (9.1.5) unstable; urgency=low
 
 debian-changelog-test (9.1.4) unstable; urgency=low
 
-
   * Update .cliff.debian.toml
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 23:30:42 +0000
 
 debian-changelog-test (9.1.3) unstable; urgency=low
-
 
   * Update .cliff.debian.toml
 
@@ -168,13 +150,11 @@ debian-changelog-test (9.1.3) unstable; urgency=low
 
 debian-changelog-test (9.1.2) unstable; urgency=low
 
-
   * Lower debhelper-compat
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 21:13:41 +0000
 
 debian-changelog-test (9.1.1) unstable; urgency=low
-
 
   * Disable temp
 
@@ -182,13 +162,11 @@ debian-changelog-test (9.1.1) unstable; urgency=low
 
 debian-changelog-test (9.1.0) unstable; urgency=low
 
-
   * Sed var
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 20:49:22 +0000
 
 debian-changelog-test (9.0.3) unstable; urgency=low
-
 
   * Typo
 
@@ -196,13 +174,11 @@ debian-changelog-test (9.0.3) unstable; urgency=low
 
 debian-changelog-test (9.0.2) unstable; urgency=low
 
-
   * Focal)
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 20:42:31 +0000
 
 debian-changelog-test (9.0.1) unstable; urgency=low
-
 
   * Env -> vars
 
@@ -210,13 +186,11 @@ debian-changelog-test (9.0.1) unstable; urgency=low
 
 debian-changelog-test (9.0.0) unstable; urgency=low
 
-
   * [**breaking**] Env vars
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 20:26:27 +0000
 
 debian-changelog-test (8.7.2) unstable; urgency=low
-
 
   * Meh
 
@@ -224,13 +198,11 @@ debian-changelog-test (8.7.2) unstable; urgency=low
 
 debian-changelog-test (8.7.1) unstable; urgency=low
 
-
   * Pin versions
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 17:12:07 +0000
 
 debian-changelog-test (8.7.0) unstable; urgency=low
-
 
   * Artifacts
 
@@ -238,13 +210,11 @@ debian-changelog-test (8.7.0) unstable; urgency=low
 
 debian-changelog-test (8.6.1) unstable; urgency=low
 
-
   * Xz -> *
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 17:04:05 +0000
 
 debian-changelog-test (8.6.0) unstable; urgency=low
-
 
   * Series & extra_series
 
@@ -252,13 +222,11 @@ debian-changelog-test (8.6.0) unstable; urgency=low
 
 debian-changelog-test (8.5.2) unstable; urgency=low
 
-
   * Passphrase
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 15:45:07 +0000
 
 debian-changelog-test (8.5.1) unstable; urgency=low
-
 
   * Passphrase
 
@@ -266,13 +234,11 @@ debian-changelog-test (8.5.1) unstable; urgency=low
 
 debian-changelog-test (8.5.0) unstable; urgency=low
 
-
   * Publish
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 15:22:00 +0000
 
 debian-changelog-test (8.4.3) unstable; urgency=low
-
 
   * List files
 
@@ -280,13 +246,11 @@ debian-changelog-test (8.4.3) unstable; urgency=low
 
 debian-changelog-test (8.4.2) unstable; urgency=low
 
-
   * Debian/source/format: 3.0 (native)
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 15:07:17 +0000
 
 debian-changelog-test (8.4.1) unstable; urgency=low
-
 
   * Build-depends
 
@@ -294,13 +258,11 @@ debian-changelog-test (8.4.1) unstable; urgency=low
 
 debian-changelog-test (8.4.0) unstable; urgency=low
 
-
   * Rebase only on changelog changes
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 14:57:20 +0000
 
 debian-changelog-test (8.3.5) unstable; urgency=low
-
 
   * Debian/rules tab
 
@@ -308,13 +270,11 @@ debian-changelog-test (8.3.5) unstable; urgency=low
 
 debian-changelog-test (8.3.4) unstable; urgency=low
 
-
   * Debian/rules
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 14:53:12 +0000
 
 debian-changelog-test (8.3.3) unstable; urgency=low
-
 
   * Package name & version
 
@@ -322,13 +282,11 @@ debian-changelog-test (8.3.3) unstable; urgency=low
 
 debian-changelog-test (8.3.2) unstable; urgency=low
 
-
   * Debian/control
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 14:43:51 +0000
 
 debian-changelog-test (8.3.1) unstable; urgency=low
-
 
   * Added debian/control "Source" field
 
@@ -336,13 +294,11 @@ debian-changelog-test (8.3.1) unstable; urgency=low
 
 debian-changelog-test (8.3.0) unstable; urgency=low
 
-
   * Build debian package
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 14:32:05 +0000
 
 debian-changelog-test (8.2.0) unstable; urgency=low
-
 
   * Skip steps not jobs
 
@@ -350,13 +306,11 @@ debian-changelog-test (8.2.0) unstable; urgency=low
 
 debian-changelog-test (8.1.1) unstable; urgency=low
 
-
   * Rm skip ci
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 14:08:28 +0000
 
 debian-changelog-test (8.1.0) unstable; urgency=low
-
 
   * Documents
   * Fetch = true
@@ -368,7 +322,6 @@ debian-changelog-test (8.1.0) unstable; urgency=low
 
 debian-changelog-test (8.0.1) unstable; urgency=low
 
-
   * README.md
   * Condition
   * Break the loop
@@ -379,13 +332,11 @@ debian-changelog-test (8.0.1) unstable; urgency=low
 
 debian-changelog-test (7.0.4) unstable; urgency=low
 
-
   * Clean unused
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 13:18:44 +0000
 
 debian-changelog-test (7.0.3) unstable; urgency=low
-
 
   * Cleanup workflows
 
@@ -393,13 +344,11 @@ debian-changelog-test (7.0.3) unstable; urgency=low
 
 debian-changelog-test (7.0.2) unstable; urgency=low
 
-
   * Rename step
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 13:14:07 +0000
 
 debian-changelog-test (7.0.1) unstable; urgency=low
-
 
   * Filename
   * Rename step
@@ -408,13 +357,11 @@ debian-changelog-test (7.0.1) unstable; urgency=low
 
 debian-changelog-test (7.0.0) unstable; urgency=low
 
-
   * [**breaking**] Test tag
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 13:09:11 +0000
 
 debian-changelog-test (6.0.1) unstable; urgency=low
-
 
   * Strip header/footer
 
@@ -422,13 +369,11 @@ debian-changelog-test (6.0.1) unstable; urgency=low
 
 debian-changelog-test (6.0.0) unstable; urgency=low
 
-
   * [**breaking**] Temp
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 12:49:28 +0000
 
 debian-changelog-test (5.0.0) unstable; urgency=low
-
 
   * [**breaking**] --latest --tag ${{ steps.semver.outputs.next }}
   * [**breaking**] Combo changelogs
@@ -437,13 +382,11 @@ debian-changelog-test (5.0.0) unstable; urgency=low
 
 debian-changelog-test (4.0.0) unstable; urgency=low
 
-
   * [**breaking**] --unreleased
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 12:32:39 +0000
 
 debian-changelog-test (3.0.0) unstable; urgency=low
-
 
   * [**breaking**] Update workflows
 
@@ -451,13 +394,11 @@ debian-changelog-test (3.0.0) unstable; urgency=low
 
 debian-changelog-test (2.0.0) unstable; urgency=low
 
-
   * [**breaking**] Update pipelines
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 12:05:33 +0000
 
 debian-changelog-test (1.0.1) unstable; urgency=low
-
 
   * Sequence
 
@@ -465,20 +406,17 @@ debian-changelog-test (1.0.1) unstable; urgency=low
 
 debian-changelog-test (1.0.0) unstable; urgency=low
 
-
   * [**breaking**] New pipelines
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 11:57:36 +0000
 
 debian-changelog-test (0.9.1) unstable; urgency=low
 
-
   * Typo
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 11:46:00 +0000
 
 debian-changelog-test (0.9.0) unstable; urgency=low
-
 
   * Cliff-release
   * Upper_first for debian
@@ -487,13 +425,11 @@ debian-changelog-test (0.9.0) unstable; urgency=low
 
 debian-changelog-test (0.8.0) unstable; urgency=low
 
-
   * Release
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 11:37:39 +0000
 
 debian-changelog-test (0.7.0) unstable; urgency=low
-
 
   * Release
 
@@ -501,13 +437,11 @@ debian-changelog-test (0.7.0) unstable; urgency=low
 
 debian-changelog-test (0.6.0) unstable; urgency=low
 
-
   * Cliff
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 11:24:12 +0000
 
 debian-changelog-test (0.5.0) unstable; urgency=low
-
 
   * Change version & commit message
 
@@ -515,13 +449,11 @@ debian-changelog-test (0.5.0) unstable; urgency=low
 
 debian-changelog-test (0.4.0) unstable; urgency=low
 
-
   * Create tag on push
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Thu, 13 Jun 2024 10:47:06 +0000
 
 debian-changelog-test (0.3.0) unstable; urgency=low
-
 
   * Improve tag workflow (#48)
   * Update changelogs for v0.2.1
@@ -530,7 +462,6 @@ debian-changelog-test (0.3.0) unstable; urgency=low
 
 debian-changelog-test (0.2.1) unstable; urgency=low
 
-
   * Release (#47)
   * Update changelogs for v0.2.0
 
@@ -538,14 +469,12 @@ debian-changelog-test (0.2.1) unstable; urgency=low
 
 debian-changelog-test (0.2.0) unstable; urgency=low
 
-
   * Rm unused (#46)
   * Update changelogs for v0.1.0
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 11 Jun 2024 16:44:21 +0000
 
 debian-changelog-test (0.1.0) unstable; urgency=low
-
 
   * Update changelogs for v0.1.0
   * Changelog (#44)
@@ -560,7 +489,6 @@ debian-changelog-test (0.1.0) unstable; urgency=low
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 11 Jun 2024 16:31:16 +0000
 
 debian-changelog-test (0.0.4) unstable; urgency=low
-
 
   * Workflows (#32)
   * 15
