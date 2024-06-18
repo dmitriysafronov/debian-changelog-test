@@ -1,4 +1,4 @@
-name: Push Rebase - develop
+name: Push [rebase] develop
 "on":
   push:
     branches:
@@ -8,7 +8,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   rebase:
-    name: Push Rebase - develop
+    name: Push [rebase] develop
     runs-on: ubuntu-latest
     steps:
       - name: Rebase all pull requests on push to the develop branch
