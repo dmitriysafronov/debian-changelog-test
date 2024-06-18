@@ -24,10 +24,9 @@ jobs:
         uses: ietf-tools/semver-action@v1.8.0
         with:
           token: ${{ github.token }}
-          branch: develop
+          branch: main
           noVersionBumpBehavior: silent
           noNewCommitBehavior: silent
-          prefix: develop/
 
       - name: Update debian/control
         if: "${{ ! startsWith(github.event.head_commit.message, 'docs: update changelogs & version for ') && steps.semver.outputs.next != '' }}"
@@ -61,5 +60,5 @@ jobs:
           default_author: github_actor
           fetch: true
           message: 'docs: update changelogs & version for ${{ steps.semver.outputs.next }}'
-          tag: 'develop/${{ steps.semver.outputs.next }} --force'
+          tag: '${{ steps.semver.outputs.next }}-rc --force'
           tag_push: '--force'
