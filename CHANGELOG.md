@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [9.4.0] - 2024-06-18
+
+### 🚀 Features
+
+- Two branches
+
 ## [9.3.10] - 2024-06-18
 
 ### 🚜 Refactor

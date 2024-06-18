@@ -1,9 +1,16 @@
+debian-changelog-test (9.4.0) unstable; urgency=low
+
+
+  * Two branches
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 08:42:19 +0000
+
 debian-changelog-test (9.3.10) unstable; urgency=low
 
 
   * Remove unused
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 08:04:36 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 08:04:38 +0000
 
 debian-changelog-test (9.3.9) unstable; urgency=low
 
