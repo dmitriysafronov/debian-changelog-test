@@ -1,21 +1,20 @@
-name: Push Rebase
+name: Push Rebase - develop
 "on":
   push:
     branches:
-      - main
+      - develop
 concurrency:
-  group: push-rebase
+  group: push-rebase-develop
   cancel-in-progress: true
 jobs:
   rebase:
-    name: Push Rebase
+    name: Push Rebase - develop
     runs-on: ubuntu-latest
     steps:
-      - name: Rebase all pull requests on push to the main branch
-        if: "${{ startsWith(github.event.head_commit.message, 'docs: update changelogs & version for ') }}"
+      - name: Rebase all pull requests on push to the develop branch
         uses: peter-evans/rebase@v3.0.0
         with:
-          base: main
+          base: develop
           exclude-drafts: true
           exclude-labels: |
             no-rebase
