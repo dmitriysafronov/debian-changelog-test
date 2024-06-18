@@ -1,9 +1,9 @@
 Source: debian-changelog-test
 Maintainer: Dmitriy Safronov <zimniy@cyberbrain.pw>
-Build-Depends: debhelper-compat (= 12)
+Build-Depends: debhelper-compat (= 13)
 Section: metapackages
 Priority: optional
-Standards-Version: 3.9.2
+Standards-Version: 4.5.1
 
 Package: debian-changelog-test
 Architecture: all
