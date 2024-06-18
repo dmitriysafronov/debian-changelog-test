@@ -27,6 +27,7 @@ jobs:
           branch: develop
           noVersionBumpBehavior: silent
           noNewCommitBehavior: silent
+          prefix: develop/
 
       - name: Update debian/control
         if: "${{ ! startsWith(github.event.head_commit.message, 'docs: update changelogs & version for ') && steps.semver.outputs.next != '' }}"
@@ -60,5 +61,5 @@ jobs:
           default_author: github_actor
           fetch: true
           message: 'docs: update changelogs & version for ${{ steps.semver.outputs.next }}'
-          tag: '${{ steps.semver.outputs.next }} --force'
+          tag: 'develop/${{ steps.semver.outputs.next }} --force'
           tag_push: '--force'
