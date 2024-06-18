@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [9.3.5] - 2024-06-18
+
+### 🐛 Bug Fixes
+
+- Standards. debhelper-compat version
+
 ## [9.3.4] - 2024-06-17
 
 ### 🐛 Bug Fixes
