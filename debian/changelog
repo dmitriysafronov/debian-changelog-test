@@ -1,10 +1,9 @@
-debian-changelog-test (9.5.0) unstable; urgency=low
+debian-changelog-test (9.4.1) unstable; urgency=low
 
 
-  * Workflows (#51)
-  * Workflows (#50)
+  * Remove unused (#58)
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 09:10:46 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 10:36:02 +0000
 
 debian-changelog-test (9.4.0) unstable; urgency=low
 
