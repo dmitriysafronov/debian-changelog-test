@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [9.3.8] - 2024-06-18
+
+### 🚜 Refactor
+
+- Workflow grouping messages
+
 ## [9.3.7] - 2024-06-18
 
 ### 🐛 Bug Fixes
