@@ -1,9 +1,16 @@
+debian-changelog-test (9.3.9) unstable; urgency=low
+
+
+  * Remove unused
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 06:37:11 +0000
+
 debian-changelog-test (9.3.8) unstable; urgency=low
 
 
   * Workflow grouping messages
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 06:26:55 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 06:26:56 +0000
 
 debian-changelog-test (9.3.7) unstable; urgency=low
 
